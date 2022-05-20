@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>silver-mobile</title>
+    <link rel="shorcut icon" href="./Assets/favicon.png">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./SobreNosotros.html">Sobre Nosotros</a></li>
+                <li><a href="./Garantias.html">Garantias</a></li>
+                <li><a href="./contactenos.html">Contactenos</a></li>  
+            </ul>
+        </nav>
+
+        <!--acá colocaremos la imagen del logo, login y carrito de compras-->
+        <div>
+            <a href="../index.html"><img src="../Assets/icono.jpg" alt="icono"/></a>
+            <a href="../Paginas/login.html"><img src="../Assets/login.jpg" alt="login"/></a>>
+            <img src="../Assets/carrito de compras.jpg" alt="carrito de compras"/>
+        </div>
+        
+        <!--acá colocaremos la barra de busqueda,se agrega con un input-->
+        <input type="text"/>
+        <input type="button" value="buscar"/>
+
+        <nav>
+            <ul>
+                <li><a href="../Paginas/sistemaoperativo.html">Sistema Operativo</a></li>
+                <li><a href="./marcas.html">Marcas</a></li>
+                <li><a href="./gamas.html">Gamas</a></li>
+                <li><a href="./accesorios.html">Accesorios</a></li>
+                <li><a href="./ofertas.html">Ofertas</a>
+                    <section id="Destacados/Ir a Ofertas"></section> 
+                <!--acá realice un enlace in interno para que me lleve a una misma seccion de la pagina-->
+            </ul>
+        </nav>
+
+    </header>
+        <!--Se empieza a dejar la estructura basica del regsitro falta programar y guardar valores en unn servidor o base de datos, para poder llevar un registro y compararlo con el login-->
+            
+        <main>
+
+            <section>
+                <form>
+                    <fieldset>
+                        <legend>Garantias</legend>
+    
+                            <p>Nombre:
+                                <input type="text" name="nombre" />
+                            </p>
+    
+                            <p>Apellidos:
+                                <input type="text" name="apellidos"  />
+                            </p>
+    
+                            <p>Numero de cedula:
+                                <input type="text" name="Numero de cedula"/>
+                            </p>
+
+                            <p>Fecha de nacimiento:
+                                <input type="date" name="Fecha de nacimiento"/>
+                            </p>
+
+                            <p>Email: 
+                                <input type="email" name="email">
+                            </p>
+
+                            <p>Contraseña: 
+                                <input type="password" name="contraseña">
+                            </p>
+
+                            <p>Confirmar Contraseña: 
+                                <input type="password" name="repeat">
+                            </p>
+
+                            <input type="submit" value="Registrarme"/>
+
+                            <input type="reset" value="limpiar"/>
+                     
+                    </fieldset>
+    
+                </form>
+    
+            </section>  
+
+        </main>
+    
+    <footer>
+        <div>
+            <h4 style="color:white">116B #74A-65 inter 1 Apto 903</h4>
+                <span style="color:white">Ubícanos</span>
+                <img src="../Assets/casita.footer.png" alt="casa"/>
+            <h4 style="color:white">sandra.l.sandoval@hotmail.com</h4>
+                <span style="color:white">Email</span>
+                <img src="../Assets/email_footer.png" alt="Email"/>
+            <h4 style="color:white">+573012411047</h4>
+                <span style="color:white">Venta Telefónica</span>
+                <img src="../Assets/telefonos_footer.png" alt="venta_tel"/>
+            <hr>
+                <h5><u style="color:white">seguinos en:</u></h5>
+            <a href="http://www.facebook.com">
+                <img src="../Assets/Facebook_twitter.png" alt="Facebook"/>
+            </a>
+        </div>
+    </footer>
+</html>
