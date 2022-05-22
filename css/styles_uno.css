@@ -21,8 +21,8 @@ header{
 
 }
 .iconoUno{
-    width:10rem;   
-    height:11rem;  
+    width:11.5rem;   
+    height:11.5rem;  
 }
 .login{
     width:20%;   
@@ -44,14 +44,13 @@ header{
     color: rgb(100, 100, 100);
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-    text-decoration: underline;
     font-size: 73%;
+    text-decoration: none;
 }
 .logos{
     display: grid;
-    grid-template-columns: 70% 15% 15%;
+    grid-template-columns:3fr 1fr 1fr;
 }
-
 .login{
     justify-self: end; 
     align-self: center;
@@ -88,6 +87,7 @@ header{
     grid-template-columns: repeat(5, 1fr);
     background-color: rgb(220, 231, 219);
     justify-items: center;
+    background-image: linear-gradient(to right, rgb(237, 243, 236), rgb(137, 196, 109));
 }
 .color--menu a{
     text-decoration: none;
@@ -98,9 +98,9 @@ header{
     border-left:   solid 2px rgb(255, 255, 255);
 }
 .lineaGris{
-    background-color:rgba(196, 196, 196);
     width: 100%;
     height: 4%;
+    background-image: linear-gradient(to right, rgb(173, 172, 172), rgb(226, 226, 226));
 }
 
 #main{
@@ -156,7 +156,7 @@ header{
 }
 .cuadros a{
     text-decoration: none;
-    color: black;
+    color: rgb(80, 80, 80);
     font-size: 85%;
 }
 .sam_a53{
@@ -263,6 +263,7 @@ div .nosotros--texto{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
 @media screen and (max-width: 700px) {
     .carrusel{
         width:100%;   /*ancho*/
@@ -351,4 +352,76 @@ div .nosotros--texto{
         background-color:rgba(46, 255, 27, 0.13);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
+}
+.color--menu a{
+    transition: all 0.5s;
+}
+.color--menu a:hover {
+    background-color: black;
+    color:white;
+}
+.titulosArriba a{
+    font-size: 73%;
+    text-decoration: none;
+    transition: font-size 0.5s, background-color 0.5s;
+}
+.titulosArriba a:hover{
+    font-size: 82%;
+    color: black;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    text-decoration: underline;
+}
+.iconoUno{ 
+    transition:height 0.5s, width 0.5s;
+}
+.iconoUno:hover{
+    width:12rem;   
+    height:13rem; 
+}
+.cuadros{
+    transition: all 0.3s;
+}
+.cuadros:hover{
+    background-color: black;
+    color:white; 
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+.cuadros a:hover{
+    color: white ;
+    text-decoration: underline;
+}
+.destacadosOfertas a{
+    text-decoration: none;
+    color: rgba(51, 170, 40, 0.93);
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: bold;
+    transition: font-size 0.5s, background-color 1s;
+}
+.destacadosOfertas a:hover{
+    font-size: 110%;
+    color: black;
+    text-decoration: underline;
+}
+article.contenedores{
+    transition: all 0.3s;
+}
+article.contenedores:hover{
+    background-color: black;
+    color: white;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+.nosotrosImg{
+    transition: all 0.3s;
+}
+.nosotrosImg:hover{
+    height:90%;
+    width: 90%;
 }
