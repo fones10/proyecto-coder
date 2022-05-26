@@ -108,7 +108,7 @@ header{
 }
 /*comienzo hacer el main acá, puse todo el main dentro de un div*/
 .carrusel{
-    width:100%;   /*ancho*/
+    width:100%;   
     height:50%;
 }
 .linea{
@@ -266,7 +266,7 @@ div .nosotros--texto{
 
 @media screen and (max-width: 700px) {
     .carrusel{
-        width:100%;   /*ancho*/
+        width:100%;   
         height:18rem;
     }
     .galeria{
@@ -360,14 +360,15 @@ div .nosotros--texto{
     background-color: black;
     color:white;
 }
-.titulosArriba a{
-    font-size: 73%;
+.nav /*.titulosarriba*/ a{
+    font-size: 90%;
     text-decoration: none;
     transition: font-size 0.5s, background-color 0.5s;
 }
-.titulosArriba a:hover{
-    font-size: 82%;
-    color: black;
+.nav /*.titulosarriba*/ a:hover{
+    font-size: 100%;
+    color: white;
+    background-color: black;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
     text-decoration: underline;
 }
@@ -424,4 +425,14 @@ article.contenedores:hover{
 .nosotrosImg:hover{
     height:90%;
     width: 90%;
+}
+.nav a{
+    color: rgb(100, 100, 100);
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 85%;
+    text-decoration: none;
+}
+#carouselExampleControls{
+    z-index: -1;
 }
