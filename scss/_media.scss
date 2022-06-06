@@ -1,0 +1,110 @@
+@media screen and (min-width: 700px){
+    .btn{
+        visibility:hidden;
+    }
+    .boton{
+        visibility:hidden;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    
+    .carrusel{
+        width:100%;   
+        height:18rem;
+    }
+    .galeria{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        justify-self: center; 
+        align-items: center;
+    }
+    .separadores article{
+        display: grid;
+        grid-template-rows: 1fr auto;
+        font-size: 75%;
+    }
+    .redes{
+        font-size: 75%;
+    }
+    .redes img{
+        width: 50%;
+    }
+    .logos{
+        display: grid;
+        grid-template-columns: 70% 15% 15%;
+    }
+    .barraBusqueda{
+        position: fixed;
+        width: 38%;
+        height: 3.5%;
+    }
+    .botonBuscar{
+        position: fixed;
+        height: 3.8%;
+        width: 10%;
+    }
+    .color--menu a{
+        font-size: 70%;
+        visibility:hidden;
+    }
+    nav.color--menu{
+        visibility:hidden;
+    }
+    .lineaGris{
+        background-color:rgb(196, 196, 196);
+        width: 100%;
+        height: 3%;
+        visibility:hidden;
+    }
+    .nosotrosImg{
+        height:90%;
+        width: 100%;
+        margin-top: 3%;
+        margin-left: 2%;
+        margin-right: 2%;
+    }   
+    .nosotros{
+        color:black;
+        font-family: Arial, Helvetica, sans-serif;
+        justify-content: center;
+        font-size: 100%;
+    }
+    div .nosotros--texto{
+        color:black;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 3%;
+        font-size: 100%;
+        text-align: center;
+    }
+    .espacio--uno{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 0%
+    }
+    .contenedores{
+        display: grid;
+        grid-template-rows: 1fr 2fr 1fr;
+        height: 85%;
+        width: 85%;
+        background-color:rgba(46, 255, 27, 0.13);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    .destacadosOfertas{
+        margin-top: 5%;
+    }
+    .galeria{
+        margin-bottom: 3%;
+    }
+    nav ul.nav{
+        display: flex;
+        position: relative;
+    
+        
+    }
+    .iconoUno{
+        margin-bottom: 2%;
+    }
+}

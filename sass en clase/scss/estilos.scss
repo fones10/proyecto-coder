@@ -1,0 +1,14 @@
+$base-font-size: 16px;
+$base-font-color:black;
+$base-font-background-color:rgb(190, 219, 217);
+$texto-font-background-color:blue;
+body{
+    font-size: $base-font-size;
+    color:$base-font-color;
+    background-color: $base-font-background-color;
+}
+    p{
+    font-size: $base-font-size;
+    color:$base-font-color;
+    background-color: $texto-font-background-color;
+    }

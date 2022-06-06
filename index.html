@@ -10,7 +10,7 @@
     <!--
     <link rel="stylesheet" href="./bootstrap.min.css">
     -->
-    <link rel="stylesheet" href="./css/styles_uno.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body><!--desde aca armo la grilla que va a ser la base para toda mi pagina-->
     <header> <!--1 contenedor-->
@@ -19,7 +19,7 @@
 
         </div>
         <nav class="container-fluid d-flex justify-content-end">
-                <ul class="container nav">
+                <ul class="container nav justify-content-end">
                     <li class="nav-item"><a href="./Paginas/SobreNosotros.html" class="nav-link">Sobre Nosotros</a></li>
                     <li class="nav-item"><a href="./Paginas/Garantias.html" class="nav-link">Garantias</a></li>
                     <li class="nav-item"><a href="./Paginas/contactenos.html" class="nav-link">Contactenos</a></li>  
@@ -45,19 +45,20 @@
       
         <p class="boton">
             <button
-              class="btn btn-light border-success"
+              class="btn"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseWidthExample"
               aria-expanded="false"
               aria-controls="collapseWidthExample"
             >   
-              menú
+            <img src="./Assets/menu-abierto.png" class="menuHamburguesa"/>
             </button>
           </p>
             <div class="collapse collapse-horizontal" id="collapseWidthExample">
-              <div class="card card-body bg-light" style="width: 60%">
+              <div class="card card-body bg-light " style="width: 60%">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
                   <li class="nav-item">
                     <a class="nav-link link-success" href="./Paginas/sistemaoperativo.html"
                       >Sistema Operativo</a
@@ -70,14 +71,10 @@
                     <a class="nav-link link-success" href="./Paginas/gamas.html">Gamas</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link link-success" href="./Paginas/accesorios.html"
-                      >accesorios</a
-                    >
+                    <a class="nav-link link-success" href="./Paginas/accesorios.html">Accesorios</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link link-success" href="./Paginas/accesorios.html"
-                      >Ofertas</a
-                    >
+                    <a class="nav-link link-success" href="./Paginas/accesorios.html">Ofertas</a>
                   </li>
                 </ul>
               </div>
@@ -104,11 +101,11 @@
     </header>
 
     <main> <!--2 contenedor-->
-        <div id="main">
+        <div>
             <!--
                 <img src="./Assets/celulares_uno.jpg" alt="carrusel" class="carrusel"/>
             -->    
-        
+            <!--carrusel -->
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -134,58 +131,57 @@
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
                 </button>
-              </div>
+            </div>
 
-                    
-                <section class="destacadosOfertas">
-                    <a href="./Paginas/ofertas.html">
-                        <h1 >Destacados/Ir a Ofertas</h1>
-                    </a>
-                    <hr class="linea">
-                </section>  
-                
-                <section class="galeria">
+      <!--acá comenzamos hacer el titulo y una linea para dar estilo-->
+              
+          <section class="destacadosOfertas">
+            <h1 >
+              <a href="./Paginas/ofertas.html">Destacados/Ir a Ofertas</a>
+            </h1>
+              <hr class="linea">
+          </section>  
+                  
+              
+        <!--acá comenzamos hacer las 3 cards o secciones-->
 
-                    <article class="cuadros">
+          <section class="galeria">
+            
+              <article class="cuadros">
+                  <img src="./Assets/samsung_a53.png" alt="celular_uno" class="imgCel"/>
+                  <div>
+                      <h2>
+                          <a href="./Paginas/ofertas.html" class="h2_dos">Samsung A53</a>
+                      </h2>
+                      <h3 class="h3_precio">$1.250.000</h3>
+                      <h3 style="color:red">$1.100.000</h3>
+                  </div>
+              </article>
 
-                        <img src="./Assets/samsung_a53.png" alt="celular_uno" class="sam_a53"/>
+              <article class="cuadros">
+                  <img src="./Assets/moto_g30.jpg" alt="celularDos" class="imgCel"/>
+                  <div>
+                      <h2>
+                          <a href="./Paginas/ofertas.html"class="h2_dos">Motorola G30</a>
+                      </h2>
+                      <h3 class="h3_precio">$850.000</h3>
+                      <h3 style="color:red" >$720.000</h3>
+                  </div>
+              </article>
 
-                        <div>
-                            <h2>
-                                <a href="./Paginas/ofertas.html" class="h2_dos">Samsung A53 5g </a>
-                            </h2>
-                            <h3 class="anterior"><del>$1.250.000</del></h2>
-                            <h3 style="color:red" class="h3_precio">$1.100.00</h3>
-                        </div>
-                    </article>
+              <article class="cuadros">
+                  <img src="./Assets/samsung_a31.jpg" alt="celular_tres" class="imgCel"/>
+                  <div>
+                      <h2>
+                          <a href="./Paginas/ofertas.html" class="h2_dos">Samsung A31</a>
+                      </h2>
+                      <h3 class="h3_precio">$930.000</h3>
+                      <h3 style="color:red">$790.000</h3>
+                  </div>       
+              </article>
 
-                    <article class="cuadros">
-                        
-                        <img src="./Assets/moto_g30.jpg" alt="celularDos" class="moto_g30"/>
-                        <div>
-                            <h2>
-                                <a href="./Paginas/ofertas.html"class="h2_dos">Motorola G30</a>
-                            </h2>
-                            <h3 class="anteriorUno"><del>$850.000</del></h3>
-                            <h3 style="color:red" class="h3_precio">$720.000</h3>
-                        </div>
-                    </article>
-
-                    <article class="cuadros">
-                        
-                        <img src="./Assets/samsung_a31.jpg" alt="celular_tres" class="samA31"/>
-
-                        <div>
-                            <h2>
-                                <a href="./Paginas/ofertas.html" class="h2_dos">Samsung A31</a>
-                            </h2>
-                            <h3 class="rebaja"><del>$930.000</del></h3>
-                            <h3 style="color:red" class="h3_precio">$790.000</h3>
-                        
-                    </article>
-                </section>
-            </section>
-
+          </section>
+          
         </div>   
 
     </main>

@@ -1,0 +1,82 @@
+/*colores y decoración, personalizacion propia de pagina*/
+.barraBusqueda{
+    background-color: rgba(247, 247, 247, 0.973);
+    border-color: rgba(196, 196, 196, 80%);
+}
+header{
+    background-color: white;
+}
+.nav a{
+    color: rgb(100, 100, 100);
+        &:hover{
+            color: white;
+            background-color: black;
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+        }
+}
+.botonBuscar{
+    background-color: rgba(247, 247, 247, 0.973);
+    border-color: rgba(119, 119, 119, 0.897);
+    color: black;
+}
+.color--menu{
+    background-color: rgb(220, 231, 219);
+    background-image: linear-gradient(to right, rgb(237, 243, 236), rgb(137, 196, 109));
+        a{
+            color: black;
+            background-color: rgb(221, 221, 221);
+            border-right: solid 2px rgb(255, 255, 255);
+            border-left:   solid 2px rgb(255, 255, 255);
+                &:hover{
+                    background-color: black;
+                    color:white;
+                }
+        }
+}
+.lineaGris{
+    background-image: linear-gradient(to right, rgb(173, 172, 172), rgb(226, 226, 226));
+}
+.linea{
+    color: rgba(51, 170, 40, 0.93);
+    border-bottom: 1px solid rgba(77, 77, 77, 0.856) ;
+}
+.destacadosOfertas{
+    color: rgba(51, 170, 40, 0.93);
+        a{
+            color: rgba(51, 170, 40, 0.93);
+                &:hover{
+                    color: black;
+                }
+        }
+}
+.cuadros{
+    background-color:rgba(46, 255, 27, 0.199); 
+    border: solid 1px rgb(206, 207, 206);
+    &:hover{
+        color: white;
+        background-color: rgb(0, 0, 0);
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    }
+}
+h2 a{
+    color: rgb(80, 80, 80);
+    &:hover{
+        color: white;
+    }
+}
+footer{
+    background-color: black;
+}
+.nav-item{
+    transition: all 0.1s;
+    &:hover{
+        background-color:rgb(3, 56, 7);
+    }
+    a{
+        color:black;
+            &:hover{
+                color:white;
+                text-decoration:underline;
+            }
+    }
+}

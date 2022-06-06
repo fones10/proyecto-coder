@@ -1,916 +1,357 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-header{
-    background-color:rgba(255, 255, 255);
-    position: fixed;
-    top: 0%;
-    bottom: 0;
-    width: 100%;
-    height: 139px;
-    z-index: 5;
-    
-}
-.titulosArriba{
-    text-align: right;
-}
-li{
-    display: inline-block;
+@charset "UTF-8";
+/*variables*/
+/*imports*/
+body {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: auto;
+  grid-template-columns: 1fr; }
 
-}
-.contactenosUno{
-    color: rgb(63, 63, 63);
-    position: fixed;
-    right: 100px;
-    top: 5px;
-    font-size: 12px;
-    text-decoration: underline;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    z-index: 2;
-    background-color: white;
-}
-.garantiasUno{
-    color: rgb(63, 63, 63);
-    position: fixed;
-    right:250px;
-    top: 5px;
-    font-size: 12px;
-    text-decoration: underline;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    z-index: 2;
-    background-color: white;
-}
-.sobreNosotrosuno{
-    color: rgb(63, 63, 63);
-    position: fixed;
-    right: 400px;
-    top: 5px;
-    font-size: 12px;
-    text-decoration: underline;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    z-index: 2;
-    background-color: white;
-}
-.iconoUno{
-    width:150px;   /*ancho*/
-    height:150px;  /*alto*/
-    position: fixed;
-    top: 1%;
-    left:0px;
-    z-index: 2;
-    overflow: hidden;
-}
-.botonBuscar{
-    background-color: rgb(196, 196, 196, 80%);
-    border-color: rgb(0, 0, 0, 70%);
-    width:50px;   /*ancho*/
-    height:25px;  /*alto*/
-    position: fixed;
-    right: 400px;
-    top: 70px;   
-    z-index: 2;
-}
-.barraBusqueda{
-    background-color: rgb(196, 196, 196, 80%);
-    border-color: rgb(196, 196, 196, 80%);
-    width:600px;   /*ancho*/
-    height:20px;  /*alto*/
-    position: fixed;
-    right: 450px;
-    top: 70px;  
-    z-index: 2;
-}
-/*aca empíezo hacer el menu principal*/
+.logos {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr; }
 
-.menu{
-    list-style: none;
-    overflow: hidden;
-    position: fixed;
-    z-index: 2;
-    
-}
-#color--menu{
-    position: fixed;
-    top: 22%;
-    height: 4%;
-    width: 100%;
-    background-color: rgb(220, 231, 219);
-    overflow: hidden;
-    z-index: 5;
+.color--menu {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); }
 
-}
-.sistemaOperativo{
-    color: black;
-    position: fixed;
-    left: 20%;
-    top: 22%;
-    background-color: rgba(221, 221, 221);
-    border-right: solid 2px rgb(255, 255, 255);
-    border-left:   solid 2px rgb(255, 255, 255);
-    font-family: Arial, Helvetica, sans-serif;
-    overflow: hidden;
-    z-index: 5;
+.lineaGris {
+  display: flex; }
 
-}
-.marcas{
-    color: black;
-    position: fixed;
-    left: 36%;
-    top: 22%;
-    background-color: rgba(221, 221, 221);
-    border-right: solid 2px white;
-    border-left:   solid 2px rgb(255, 255, 255);
-    font-family: Arial, Helvetica, sans-serif;
-    overflow: hidden;
-    z-index: 5;
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1%; }
 
-}
-.gamas{
-    color: black;
-    position: fixed;
-    top: 22%;
-    right: 48%;
-    background-color: rgba(221, 221, 221);
-    border-right: solid 2px white;
-    border-left:   solid 2px rgb(255, 255, 255);
-    font-family: Arial, Helvetica, sans-serif;
-    z-index: 5;
-    overflow: hidden;
-}
-.accesorios{
-    color: black;
-    position: fixed;
-    right: 34%;
-    top: 22%;
-    background-color: rgba(221, 221, 221);
-    border-right: solid 2px white;
-    border-left:   solid 2px rgb(255, 255, 255);
-    font-family: Arial, Helvetica, sans-serif;
-    overflow: hidden;
-}
-.ofertas{
-    color: black;
-    position: fixed;
-    right: 22%;
-    top: 22%;
-    background-color: rgba(221, 221, 221);
-    align-items: center;
-    border-right: solid 2px white;
-    border-left:   solid 2px rgb(255, 255, 255);
-    font-family: Arial, Helvetica, sans-serif;
-    overflow: hidden;
-}
-div#color{
-    position: fixed;
-    top: 20%;
-    height: 2%;
-    width: 100%;
-    background-color: rgba(196, 196, 196); 
-    margin-right: 0%;
-    z-index: 2;
-    box-sizing: border-box;
-    overflow: hidden;
-}
-hr{
-    overflow:hidden;
-    position: fixed;
-    top: 25%;
-    width: 100%;
-    height: 2%;
-    background-color: rgba(196, 196, 196);  
-    margin-right: 0%;
-    z-index: 5;
-}
+.cuadros {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+  .cuadros div {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr); }
 
-.login{
-    width:40px;   /*ancho*/
-    height:40px;  /*alto*/
-    position: fixed;
-    top: 65px;
-    right:140px;
-    z-index: 2;
-    overflow: hidden;
-}
-.compras{
-    width:40px;   /*ancho*/
-    height:40px;  /*alto*/
-    position: fixed;
-    top: 65px;
-    right:100px;
-    z-index: 2;
-    overflow: hidden;
-}
-.lineaUno{
-    background-color: rgb(196, 196, 196);
-    z-index: 2;
-    overflow: hidden;
-}
-.carrusel{
-    display:inline-block;
-    margin-top:12%;
-    width:100%;   /*ancho*/
-    height:40%;  /*alto*/
-    overflow: hidden;
-}
-.enlaces a{
-    text-decoration: none;
-    color: inherit;
-    overflow: hidden;
-    background-color: rgba(51, 170, 40, 0.93);
-}
-.destacadosOfertas{
-    color: rgba(51, 170, 40, 0.93);
-    border-bottom: 4px solid rgba(27, 68, 4, 0.856) ;
-    float:left;
-    margin-left:1.5%;
-    position: relative;
-    margin-right: 0%; 
-    font-family: Arial, Helvetica, sans-serif;
-    z-index: 0;
-    overflow: hidden;
-    background-color: rgba(168, 212, 165, 0.12);
-}
-.linea{
-    color: rgba(51, 170, 40, 0.93);
-    border-bottom: 1px solid rgba(27, 68, 4, 0.856) ;
-    float:left;
-    position: relative;
-    width: 100%; 
-    z-index: 0%;
-    overflow: hidden;
-    background-color: rgba(168, 212, 165, 0.12);
-}
-.cuadros{
-    display: inline-block;
-    width: 33%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    background-color:rgba(46, 255, 27, 0.199);
+footer section {
+  display: grid;
+  grid-template-rows: 1fr auto; }
 
-}
-.sam_a53{
-    width:170px;   
-    height:215px;
-    margin-left: 10px;
-}
-.moto_g30{
-    width:170px;   
-    height:215px; 
-    margin-left: 10px;
-}
-.samA31{
-    width:170px;   
-    height:215px;
-    margin-left: 10px; 
-}
-.h2_uno{
-    position: relative;
-    top: 50px;
-    left:185px;
-}
-.h2_dos{
-    position: relative;
-    left:185px;
-    top:50px;
-}
-.h2Tres{
-    position: relative;
-    left:185px;
-    top:50px;
-}
-h3{
-    position: relative;
-    font-size: 35px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left:210px;
-    bottom: 100px;
-}
-footer{
+.separadores {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); }
+  .separadores article {
+    display: grid;
+    grid-template-rows: repeat(3, auto); }
+
+.redes {
+  display: grid;
+  grid-template-rows: repeat(2, auto); }
+
+/*reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/*colores y decoración, personalizacion propia de pagina*/
+.barraBusqueda {
+  background-color: rgba(247, 247, 247, 0.973);
+  border-color: #c4c4c4; }
+
+header {
+  background-color: white; }
+
+.nav a {
+  color: #646464; }
+  .nav a:hover {
+    color: white;
     background-color: black;
-    font-family: arial;
-}
-h4{
-    position: relative;
-    display: inline-block;
-    font-size: 10px;
-    top:45px;
-}
-img{
-    height:40px;
-    width: 60px;
-}
-span{
-    position: relative;
-    font-size: 15px;
-    top: 32px;
-}
-.casa{
-    position: relative;
-    left:50px;
-    top:10px;
-}
-.email{
-    position: relative;
-    top:10px;
-    left:200px;
-}
-.telefonica{
-    position: relative;
-    left:350px;
-    top:10px;
-}
-.ubi{
-    left:112px;
-}
-.ema{
-    left:255px;
-}
-.ven{
-    left: 435px;
-}
-.dire{
-    left:210px;
-}
-.correo{
-    left:350px;
-}
-.cel{
-    left: 535px;
-}
-h5{
-    position: relative;
-    font-size: 10px;
-    font-family: arial;
-    margin-left: 10px;
-}
-#facebook{
-    position: relative;
-    height:30px;
-    width: 90px;
-    margin-bottom: 7px;
-} 
-.espacio{
-    margin-top: 145px;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-    
-}
-.nosotrosImg{
-    display: inline-block;
-    position: relative;
-    top: 60px; 
-    height:350px;
-    width: 700px;
-    margin-left: 20px;
-    
-}
-.nosotros{
-    display: inline-block;
-    color:black;
-    position:relative;
-    bottom: 250px;
-    left: 200px;
-    font-size: 50px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.nosotros--texto{
-    display: inline-block;
-    color:black;
-    position:relative;
-    bottom: 210px;
-    left: 750px;
-    font-size: 20px;
-    margin-right: 750px;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-}
-.contenedores{
-    display: inline-block;
-    position: relative;
-    margin-left: 50px;
-    height: 300px;
-    width: 433px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    background-color:rgba(46, 255, 27, 0.13);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin-bottom: 10px;
-}
-.logisticaImg{
-    display: inline-block;
-    position:relative;
-    top: 60px;
-    height:155px;
-    width: 154px;
-    margin-left:  110px;
-}
-.logistica{
-    display: inline-block;
-    position:relative;
-    text-align: center;
-    font-size: 25px;
-    bottom: 150px;
-    left: 5px;
-}
-.logistica--texto{
-    display: inline-block;
-    position:relative;
-    text-align: center;
-    font-size: 18px;
-    top: 45px;
-}
-.preciosImg{
-    display: inline-block;
-    position:relative;
-    height:155px;
-    width: 154px;
-    margin-left: 120px;
-    top: 60px;
-}
-.precios{
-    display: inline-block;
-    position:relative;
-    text-align: center;
-    font-size: 25px;
-    bottom: 150px;
-    left: 75px;
-}
-.precios--texto{
-    display: inline-block;
-    position:relative;
-    text-align: center;
-    font-size: 18px;
-    top: 45px;
-}.rentabilidadImg{
-    display: inline-block;
-    position:relative;
-    height:155px;
-    width: 154px;
-    margin-left: 120px;
-    top: 70px;
-}
-.rentabilidad{
-    display: inline-block;
-    position:relative;
-    text-align: center;
-    font-size: 25px;
-    bottom: 140px;
-    left: 100px;
-}
-.rentabilidad--texto{
-    display: inline-block;
-    position:relative;
-    text-align: center;
-    font-size: 18px;
-    top: 60px;
-    margin-bottom: 0px;
-}
-.fondo{
-    background-image: url(../Assets/fondoFormulaio.png);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    height: 900px;
-    margin-top: 150px;
-}
-.cuadroUno{
-    display: inline-block;
-    position: relative;
-    width: 435px;
-    height: 640px;
-    left: 500px;
-    margin-top: 100px;
-    background: rgba(255, 255, 255, 0.56);
-    z-index: 0;
-}
-.cuadroDos{
-    display: inline-block;
-    position: relative;
-    width: 390px;
-    height: 600px;
-    left: 20px;
-    top: 20px;
-    z-index: 0;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25); }
 
-    background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.botonBuscar {
+  background-color: rgba(247, 247, 247, 0.973);
+  border-color: rgba(119, 119, 119, 0.897);
+  color: black; }
 
-    font-family: Arial, Helvetica, sans-serif;
-}
-legend{
-    display: inline-block;
-    position: relative;
-    top: 30px;
-    left:30px;
-    margin-bottom: 30px;
-    font-size: 30px;
-}
-.nombre{
-    display: inline-block;
-    position: relative;
-    top: 20px;
-    left:10px;
-}
-.apellidos{
-    display: inline-block;
-    position: relative;
-    top: 30px;
-    left:10px;
-}
-.nummeroCedula{
-    display: inline-block;
-    position: relative;
-    top: 40px;
-    left:10px;
-}
-.marcaCelular{
-    display: inline-block;
-    position: relative;
-    top: 50px;
-    left:10px;
-}
-.correoUno{
-    display: inline-block;
-    position: relative;
-    top: 60px; 
-    left:10px; 
-}
-.imei{
-    display: inline-block;
-    position: relative;
-    top: 70px;
-    left:10px; 
-}
-.cuentanos{
-    display: inline-block;
-    position: relative;
-    height: 50px;
-    width: 60px;
-    top: 110px;
-    left:10px; 
-}
-.enviar{
-    background: rgba(20, 255, 0, 0.12);
-    border: 2px solid rgba(196, 196, 196, 0.58);
-    box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.color--menu {
+  background-color: #dce7db;
+  background-image: linear-gradient(to right, #edf3ec, #89c46d); }
+  .color--menu a {
+    color: black;
+    background-color: #dddddd;
+    border-right: solid 2px white;
+    border-left: solid 2px white; }
+    .color--menu a:hover {
+      background-color: black;
+      color: white; }
 
-    display: inline-block;
-    position: relative;
-    top: 185px;
-    left:160px; 
-    width: 150px;
-    height: 40px;
-}
-input{
-    background: rgba(196, 196, 196, 0.4);
-    width: 220px;
-    height: 30px;
-}
-select{
-    background: rgba(196, 196, 196, 0.4);
-}
-textarea{
-    background: rgba(196, 196, 196, 0.4);
-    width: 360px;
-    height: 131px;
-}
-.tituloPrincipal{
-    font-size: 45px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 116px;
-    margin-top: 200px;
-    top: 165px;
-}
-.mayor{
-    position: absolute;
-    width: 362px;
-    height: 279px;
-    margin-left: 900px;
-    margin-top: 100px;
-    background: rgba(20, 255, 0, 0.08);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    padding-top: 190px;
-    text-align: center;
-    font-family: arial;
-}
-.oficina{
-    position: absolute;
-    width: 362px;
-    height: 279px;
-    margin-left: 900px;
-    margin-top: 410px;
-    background: rgba(20, 255, 0, 0.08);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    padding-top: 200px;
-    text-align: center;
-    font-family: arial;
-}
-.buzon{
-    position: absolute;
-    width: 146px;
-    height: 147px;
-    margin-left: 1000px;
-    margin-top: 120px;
-}
-.tel{
-    position: absolute;
-    width: 146px;
-    height: 147px;
-    margin-left: 1000px;
-    margin-top: 450px;
-}
-.tituloSecundario
-{
-    font-size: 35px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 116px;
-    margin-top: 50px;
-    margin-bottom: 30px;
-    top: 165px;
-}
-.mapa{
-    margin-bottom: 10px;
-    margin-left: 15px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.apple{
-    display: inline-block;
-    position: absolute;
+.lineaGris {
+  background-image: linear-gradient(to right, #adacac, #e2e2e2); }
+
+.linea {
+  color: rgba(51, 170, 40, 0.93);
+  border-bottom: 1px solid rgba(77, 77, 77, 0.856); }
+
+.destacadosOfertas {
+  color: rgba(51, 170, 40, 0.93); }
+  .destacadosOfertas a {
+    color: rgba(51, 170, 40, 0.93); }
+    .destacadosOfertas a:hover {
+      color: black; }
+
+.cuadros {
+  background-color: rgba(46, 255, 27, 0.199);
+  border: solid 1px #cecfce; }
+  .cuadros:hover {
+    color: white;
+    background-color: black;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25); }
+
+h2 a {
+  color: #505050; }
+  h2 a:hover {
+    color: white; }
+
+footer {
+  background-color: black; }
+
+.nav-item {
+  transition: all 0.1s; }
+  .nav-item:hover {
+    background-color: #033807; }
+  .nav-item a {
+    color: black; }
+    .nav-item a:hover {
+      color: white;
+      text-decoration: underline; }
+
+@media screen and (min-width: 700px) {
+  .btn {
+    visibility: hidden; }
+  .boton {
+    visibility: hidden; } }
+
+@media screen and (max-width: 700px) {
+  .carrusel {
     width: 100%;
-    height: 200px;
-    margin-top: 0px;
-    top: 185px;
-}
-.divisiones{
-    display: inline-block;
-    margin-top: 400px;
-    background: rgba(20, 255, 0, 0.08);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    width: 353px;
-    height: 123px;
-    margin-left: 110px;
-}
-.tituloCel{
-    font-size: 20px;
-    text-align: center;
-}
-.celImg{
-    width: 87px;
-    height: 100px;
-    margin-left: 5px;
-}
-.precioUno{
-    font-size: 20px;
-    margin-left: 150px;
-    margin-top: 70px;
-}
-.tamaño{
-    position: relative;
-    bottom: 180px;
-    text-align: center;
-    left: 20px;
-}
-.colors{
-    position: relative;
-    bottom: 175px;
-    text-align: center;
-    left: 20px;
-}
-.android{
-    display: inline-block;
-    position: absolute;
+    height: 18rem; }
+  .galeria {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    justify-self: center;
+    align-items: center; }
+  .separadores article {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    font-size: 75%; }
+  .redes {
+    font-size: 75%; }
+  .redes img {
+    width: 50%; }
+  .logos {
+    display: grid;
+    grid-template-columns: 70% 15% 15%; }
+  .barraBusqueda {
+    position: fixed;
+    width: 38%;
+    height: 3.5%; }
+  .botonBuscar {
+    position: fixed;
+    height: 3.8%;
+    width: 10%; }
+  .color--menu a {
+    font-size: 70%;
+    visibility: hidden; }
+  nav.color--menu {
+    visibility: hidden; }
+  .lineaGris {
+    background-color: #c4c4c4;
     width: 100%;
-    height: 200px;
-    margin-top: 350px;
-    top: 185px;
-}
-.divisionesUno{
-    display: inline-block;
-    margin-top: 85px;
-    background: rgba(20, 255, 0, 0.08);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    width: 353px;
-    height: 123px;
-    margin-left: 110px;
-}
-.titulo_cel{
-    font-size: 20px;
-    text-align: center;
-}
-.cel_img{
-    position: relative;
-    width: 87px;
-    height: 100px;
-    right:55px;
-}
-.ofertasTitulos{
-    display: inline-block;
-    position: relative;
-    left:280px;
-    bottom:100px ;
-}
-.titulo_subrayado{
-    display: inline-block;
-    position: relative;
-    margin-left: 140px;
-    font-size: 20px;
-    margin-top: 70px;
-}
-.titulo_color{
-    display: inline-block;
-    position: relative;
-    bottom: 150px;
-    margin-left: 240px;
-    font-size: 25px;  
-}
-.colorUno{
-    position: relative;
-    bottom: 225px;
-    text-align: center;
-    left: 20px;
-}
-.windows{
-    display: inline-block;
-    position: absolute;
+    height: 3%;
+    visibility: hidden; }
+  .nosotrosImg {
+    height: 90%;
     width: 100%;
-    height: 200px;
-    margin-top: 350px;
-    top: 530px;
-}
-.divisionesDos{
-    display: inline-block;
-    margin-top: 85px;
-    background: rgba(20, 255, 0, 0.08);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    width: 353px;
-    height: 123px;
-    margin-left: 570px;
-}
-.titulo_nokia{
-    margin-top: 100px;
-    display: inline-block;   
-    position: relative;
-    bottom: 70px;
-    margin-left: 130px;
-}
-.nokiaImg{
-    position: relative;
-    width: 87px;
-    height: 100px;
-    right: 230px;
-    top: 20px;
-}
-.titulo_nokia{
-    display: inline-block;  
-    position: relative;
-    font-size: 20px;
-    padding-top: 50px;
-    margin-left: 150px;
-    margin-top: 10px;
-}
-.tamañoNokia{
-    position: relative;
-    bottom: 55px;
-    text-align: center;
-    left: 20px;
-}
-.nokia{
-    position: relative;
-    font-size: 20px;
-    margin-left: 150px;
-    bottom:10px;
-}
-.colorsUno{
-    position: relative;
-    font-size: 16px;
-    margin-left: 160px;
-    bottom:103px;
-}
-.disposicion{
-    margin-top: 230px;
-    font-size: 45px;
-    text-align: center;
+    margin-top: 3%;
+    margin-left: 2%;
+    margin-right: 2%; }
+  .nosotros {
+    color: black;
     font-family: Arial, Helvetica, sans-serif;
-}
-.tituloDos{
-    margin-top: 50px;
-    font-size: 30px;
-    text-align: center;
+    justify-content: center;
+    font-size: 100%; }
+  div .nosotros--texto {
+    color: black;
     font-family: Arial, Helvetica, sans-serif;
-}
-.marcasImg{
-    width: 1439px;
-    height: 379px;
-    margin-left: 40px;
-}
-.fondoColors{
-    display: inline-block;
-    width: 100%;
-    height: 171px;
-    background: rgba(20, 255, 0, 0.08);
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.lista{
-    list-style-type: circle;
-    margin-left: 30px;
-    margin-top: 10px;
-    display: block;
-}
-.gamasGenerales{
-    margin-top: 220px;
-    margin-left: 800px;
+    margin-left: 3%;
+    font-size: 100%;
+    text-align: center; }
+  .espacio--uno {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0%; }
+  .contenedores {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    height: 85%;
+    width: 85%;
+    background-color: rgba(46, 255, 27, 0.13);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+  .destacadosOfertas {
+    margin-top: 5%; }
+  .galeria {
+    margin-bottom: 3%; }
+  nav ul.nav {
+    display: flex;
+    position: relative; }
+  .iconoUno {
+    margin-bottom: 2%; } }
+
+/*header*/
+/*menu nav bootstrap*/
+header {
+  grid-area: header;
+  position: sticky;
+  top: 0px;
+  z-index: 2; }
+
+.nav a {
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 85%;
+  text-decoration: none; }
+  .nav a:hover {
+    font-size: 100%;
+    text-decoration: underline; }
+
+/*imagenes "logo, login,y carrito de compras*/
+.iconoUno {
+  width: 8rem;
+  height: 4rem; }
+
+.menuHamburguesa {
+  margin-top: 25%;
+  width: 2rem;
+  height: 2rem; }
+
+.login {
+  width: 3rem;
+  height: 3rem;
+  justify-self: end;
+  align-self: center; }
+
+.compras {
+  width: 3rem;
+  height: 3rem;
+  justify-self: start;
+  align-self: center; }
+
+.barraBusqueda {
+  width: 40%;
+  position: fixed;
+  top: 16%;
+  left: 25%; }
+
+.botonBuscar {
+  font-family: Arial, Helvetica, sans-serif;
+  position: fixed;
+  top: 16%;
+  left: 65%; }
+
+.color--menu {
+  justify-items: center; }
+  .color--menu a {
+    text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
-    width: 586px;
-    height: 40px;
-    text-align: center;
-    background: rgba(20, 255, 0, 0.08);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.video{
-    display: inline-block;
-    position: relative;
-    width: 596px;
-    height: 287px;
-    left: 200px;
-    top: 20px;
-}
-.explicamos{
-    display: inline-block;
-    position: relative;
-    margin-top: 100px;
-    top: 100px;
-    left: 810px;
+    transition: all 0.5s; }
+
+.lineaGris {
+  width: 100%;
+  height: 4%;
+  top: 100px; }
+
+/*comienzo hacer el main acá, puse todo el main dentro de un div*/
+.carousel-inner {
+  z-index: -2; }
+
+.carousel-indicators {
+  z-index: 0; }
+
+.linea {
+  width: 100%; }
+
+.destacadosOfertas {
+  font-family: Arial, Helvetica, sans-serif; }
+  .destacadosOfertas a {
+    text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
-    width: 586px;
-    height: 40px;
-    text-align: center;
-    background: rgba(20, 255, 0, 0.08);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.diferencia{
-    position: relative;
+    font-style: bold;
+    transition: all 0.5s; }
+    .destacadosOfertas a:hover {
+      font-size: 110%;
+      text-decoration: underline; }
+
+.cuadros {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 1%;
+  margin-right: 1%;
+  transition: all 0.3s; }
+  .cuadros:hover {
+    width: 97%;
+    height: 100%; }
+
+.imgCel {
+  width: 170px;
+  height: 215px;
+  margin-left: 10px; }
+
+.cuadros div {
+  justify-self: center;
+  align-items: center;
+  justify-content: center; }
+
+h2 a {
+  text-decoration: none;
+  font-size: 85%;
+  text-decoration: underline; }
+
+.h3_precio {
+  justify-self: center;
+  align-self: center;
+  text-decoration: line-through;
+  transition: all 0,3s; }
+
+h3 {
+  justify-self: center;
+  align-self: center; }
+
+/*comienzo hacer el footer acá, separe el section en 2 divs*/
+footer {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 75%;
+  margin-top: 1%; }
+
+.separadores {
+  align-items: center;
+  justify-items: center; }
+  .separadores article {
+    justify-items: center; }
+
+.redes {
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center; }
+  .redes h5 {
     font-family: Arial, Helvetica, sans-serif;
-    width: 586px;
-    height: 60px;
-    bottom: 200px;
-    margin-left: 30px;
-    text-align: center;
-    background: rgba(20, 255, 0, 0.08);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.gamasUno{
-    position: relative;
-    width: 696px;
-    height: 487px;
-    bottom: 150px;
-    margin-left: 10px;
-}
-.parrafo{ 
-    display: inline-block;
-    position: relative;
-    font-family: Arial, Helvetica, sans-serif;
-    width: 590px;
-    height: 350px;
-    left: 100px;
-    bottom: 110px;
-    padding: 20px;
-    line-height: 1.5;
-    background: rgba(20, 255, 0, 0.08);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.accesoriosCelular{
-    margin-top: 200px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 40px;
-    margin-left: 550px;
-}
-.accesorioImg{
-    display: block;
-    width: 100%;
-    height: 400px;
-    margin-top: 20px;
-}
-.contenedoresCuatro{
-    display: inline-block;
-    position: relative;
-    margin-left: 20px;
-    height: 300px;
-    width: 710px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    background-color:rgba(46, 255, 27, 0.13);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.contenedorOfertas{
-    margin-top: 200px;
-    width: 886px;
-    height: 318px;
-    background-color:rgba(46, 255, 27, 0.13);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
+    font-size: 100%; }
+  .redes img {
+    width: 50%; }
+
+article h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%; }
+
+.nav-item {
+  transition: all 0.01s; }
+  .nav-item .nav-item a:hover {
+    text-decoration: underline; }
