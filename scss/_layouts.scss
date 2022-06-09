@@ -1,3 +1,4 @@
+@import "_mixin";
 body{
     display:grid;
     grid-template-areas: 
@@ -14,23 +15,19 @@ body{
     grid-template-columns:3fr 1fr 1fr;
 }
 .color--menu{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    @include grid-columns(5);
 }
 .lineaGris{
     display: flex;
 }
 .galeria{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    @include grid-columns(3);
     gap: 1%;
 }
 .cuadros{
-    display: grid;
-    grid-template-columns:repeat(2, 1fr);
+    @include grid-columns(2);
     div{
-        display: grid;
-        grid-template-rows: repeat(3, 1fr);
+        @include grid-rows(3);
     }
 }
 footer section{
@@ -38,14 +35,11 @@ footer section{
     grid-template-rows: 1fr auto;
 }
 .separadores{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    @include grid-columns(3);
     article{
-        display: grid;
-        grid-template-rows: repeat(3, auto);
+        @include grid-rows-auto(3);
     }
 }
 .redes{
-    display: grid;
-    grid-template-rows: repeat(2, auto);
+    @include grid-rows-auto(2);
 }

@@ -1,0 +1,65 @@
+/*header*/
+/*menu nav bootstrap*/
+header{
+    grid-area: header; 
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+}
+.nav a{
+    font-weight: bold;
+    font-family: $fuente-principal;
+    font-size: 85%;
+    text-decoration: $text-decoration; 
+        &:hover{
+            font-size: 100%;
+            text-decoration: underline;
+        }
+}
+/*imagenes "logo, login,y carrito de compras*/
+.iconoUno{
+    width:8rem;   
+    height:4rem;  
+}
+.menuHamburguesa{
+    margin-top: 25%;
+    width:2rem;   
+    height:2rem;
+}
+.login{
+    width:3rem;   
+    height:3rem;
+    justify-self: end; 
+    align-self: center;
+}
+.compras{
+    width:3rem;   
+    height:3rem;
+    justify-self: start;
+    align-self: center;
+} 
+.barraBusqueda{
+    width: 40%;
+    position: fixed;
+    top: 16%;
+    left: 25%;
+}
+.botonBuscar{
+    font-family: $fuente-principal;
+    position: fixed;
+    top: 16%;
+    left: 65%;
+}
+.color--menu{
+justify-items: center;
+    a{
+        text-decoration: $text-decoration;
+        font-family: $fuente-principal;
+        transition: all 0.5s;
+    }
+}
+.lineaGris{
+    width: 100%;
+    height: 4%;
+    top: 100px;
+}

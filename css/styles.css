@@ -1,6 +1,6 @@
 @charset "UTF-8";
-/*variables*/
 /*imports*/
+/*mixin para el layout*/
 body {
   display: grid;
   grid-template-areas: "header" "main" "footer";
@@ -51,6 +51,8 @@ footer section {
   padding: 0;
   box-sizing: border-box; }
 
+/*variables y mixin*/
+/*mapas-->acá creare los mapas con map-get*/
 /*colores y decoración, personalizacion propia de pagina*/
 .barraBusqueda {
   background-color: rgba(247, 247, 247, 0.973);
@@ -64,11 +66,11 @@ header {
   .nav a:hover {
     color: white;
     background-color: black;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25); }
+    box-shadow: 0px 2px 2px; }
 
 .botonBuscar {
   background-color: rgba(247, 247, 247, 0.973);
-  border-color: rgba(119, 119, 119, 0.897);
+  border-color: #c4c4c4;
   color: black; }
 
 .color--menu {
@@ -87,8 +89,7 @@ header {
   background-image: linear-gradient(to right, #adacac, #e2e2e2); }
 
 .linea {
-  color: rgba(51, 170, 40, 0.93);
-  border-bottom: 1px solid rgba(77, 77, 77, 0.856); }
+  color: #adacac; }
 
 .destacadosOfertas {
   color: rgba(51, 170, 40, 0.93); }
@@ -103,7 +104,7 @@ header {
   .cuadros:hover {
     color: white;
     background-color: black;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25); }
+    box-shadow: 5px 5px 5px; }
 
 h2 a {
   color: #505050; }
@@ -355,3 +356,5 @@ article h4 {
   transition: all 0.01s; }
   .nav-item .nav-item a:hover {
     text-decoration: underline; }
+
+/*mixin para el layout*/

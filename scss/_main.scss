@@ -1,0 +1,61 @@
+
+/*comienzo hacer el main acá, puse todo el main dentro de un div*/
+
+.carousel-inner{
+    z-index: -2;
+}
+.carousel-indicators{
+    z-index: 0; 
+}
+.linea{
+    width: 100%;
+}
+.destacadosOfertas{
+    font-family: $fuente-principal;
+        a{
+            text-decoration: $text-decoration;
+            font-family: $fuente-principal;
+            font-style: bold;
+            transition: all 0.5s;
+                &:hover{
+                    font-size:110%;
+                    text-decoration: underline;
+                }   
+        }
+}
+.cuadros{
+    font-family: $fuente-principal;
+    margin-left: 1%;
+    margin-right: 1%;
+    transition: all 0.3s;
+        &:hover{
+            width: 97%;
+            height: 100%;
+        }
+}
+.imgCel{
+    width:170px;   
+    height:215px;
+    margin-left: 10px;
+}
+.cuadros div{
+    justify-self: center; 
+    align-items: center;
+    justify-content: center;
+}
+h2 a{
+    text-decoration: $text-decoration;
+    font-size: 85%;
+    text-decoration: underline;
+}
+.h3_precio{
+    justify-self: center;
+    align-self: center;
+    text-decoration: line-through;
+    transition: all 0,3s;
+    
+}
+h3{
+    justify-self: center;
+    align-self: center
+}

@@ -1,0 +1,36 @@
+
+/*comienzo hacer el footer acá, separe el section en 2 divs*/
+footer{
+    font-family: $fuente-principal;
+    font-size: 75%;
+    margin-top: 1%;
+}
+.separadores{
+    align-items: center;
+    justify-items: center;
+        article{
+            justify-items: center;
+        }
+}
+.redes{
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+        h5{
+            font-family: $fuente-principal;
+            font-size:100%
+        }
+        img{
+            width: 50%;
+        }
+}
+article h4{
+    font-family: $fuente-principal;
+    font-size:100%;
+}
+.nav-item {
+    transition: all 0.01s; 
+        .nav-item a:hover {
+            text-decoration: underline;
+        }
+}

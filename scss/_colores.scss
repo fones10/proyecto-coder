@@ -1,81 +1,102 @@
+/*mapas-->acá creare los mapas con map-get*/
+$mapa-colores:(
+    blancoBarra:rgba(247, 247, 247, 0.973),
+    blanco: white,
+    blancoMenu:rgb(220, 231, 219),
+    bancoMenuAnclas:rgb(221, 221, 221),
+    grisBorde: rgba(196, 196, 196, 80%),
+    gris:rgb(100, 100, 100),
+    negro: black,
+    negroHover:rgba(0, 0, 0, 0.25),
+    gradienteMenu1:rgb(237, 243, 236),
+    gradienteMenu2:rgb(137, 196, 109),
+    lineaGris1:rgb(173, 172, 172),
+    lineaGris2:rgb(226, 226, 226),
+    destacadosVerde:rgba(51, 170, 40, 0.93),
+    verdecuadro:rgba(46, 255, 27, 0.199),
+    bordeGris--cuadro:rgb(206, 207, 206),
+    Box--shadow:rgba(0, 0, 0, 0.25),
+    tituloCelular-Anclas:rgb(80, 80, 80),
+    verdeFondo--Ham:rgb(3, 56, 7)
+    );
+
 /*colores y decoración, personalizacion propia de pagina*/
 .barraBusqueda{
-    background-color: rgba(247, 247, 247, 0.973);
-    border-color: rgba(196, 196, 196, 80%);
+    background-color:map-get($mapa-colores,blancoBarra);
+    border-color: map-get($mapa-colores,grisBorde);
 }
 header{
-    background-color: white;
+    background-color: map-get($mapa-colores,blanco);
 }
 .nav a{
-    color: rgb(100, 100, 100);
+    color: map-get($mapa-colores,gris);
         &:hover{
-            color: white;
-            background-color: black;
-            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+            color: map-get($mapa-colores, blanco);
+            background-color: map-get($mapa-colores, negro);
+            box-shadow: 0px 2px 2px map-get($mapa-colores,box-shadow);
         }
 }
 .botonBuscar{
-    background-color: rgba(247, 247, 247, 0.973);
-    border-color: rgba(119, 119, 119, 0.897);
-    color: black;
+    background-color: map-get($mapa-colores,blancoBarra );
+    border-color: map-get($mapa-colores,grisBorde);
+    color: map-get($mapa-colores,negro);
 }
 .color--menu{
-    background-color: rgb(220, 231, 219);
-    background-image: linear-gradient(to right, rgb(237, 243, 236), rgb(137, 196, 109));
+    background-color: map-get($mapa-colores,blancoMenu);
+    background-image: linear-gradient(to right, map-get($mapa-colores,gradienteMenu1), map-get($mapa-colores,gradienteMenu2));
         a{
-            color: black;
-            background-color: rgb(221, 221, 221);
-            border-right: solid 2px rgb(255, 255, 255);
-            border-left:   solid 2px rgb(255, 255, 255);
+            color: map-get($map:$mapa-colores , $key:negro );
+            background-color:map-get($mapa-colores,bancoMenuAnclas);
+            border-right: solid 2px map-get($mapa-colores,blanco);
+            border-left:   solid 2px map-get($mapa-colores,blanco);
                 &:hover{
-                    background-color: black;
-                    color:white;
+                    background-color: map-get($mapa-colores, negro);
+                    color:map-get($mapa-colores,blanco);
                 }
         }
 }
 .lineaGris{
-    background-image: linear-gradient(to right, rgb(173, 172, 172), rgb(226, 226, 226));
+    background-image: linear-gradient(to right, map-get($mapa-colores,lineaGris1), map-get($mapa-colores,lineaGris2));
 }
 .linea{
-    color: rgba(51, 170, 40, 0.93);
-    border-bottom: 1px solid rgba(77, 77, 77, 0.856) ;
+    color:map-get($mapa-colores,lineaGris1);
 }
 .destacadosOfertas{
-    color: rgba(51, 170, 40, 0.93);
+    color: map-get($mapa-colores ,destacadosVerde);
         a{
-            color: rgba(51, 170, 40, 0.93);
+            color: map-get($mapa-colores ,destacadosVerde);
                 &:hover{
-                    color: black;
+                    color: map-get($mapa-colores,negro);
                 }
         }
 }
 .cuadros{
-    background-color:rgba(46, 255, 27, 0.199); 
-    border: solid 1px rgb(206, 207, 206);
+    background-color:map-get($mapa-colores,verdecuadro); 
+    border: solid 1px map-get($mapa-colores, bordeGris--cuadro);
     &:hover{
-        color: white;
-        background-color: rgb(0, 0, 0);
-        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+        color: map-get($mapa-colores,blanco);
+        background-color: map-get($mapa-colores, negro);
+        box-shadow: 5px 5px 5px map-get($mapa-colores,box-shadow);
     }
 }
 h2 a{
-    color: rgb(80, 80, 80);
+    color:map-get($mapa-colores,tituloCelular-Anclas);
     &:hover{
-        color: white;
+        color: map-get($mapa-colores,blanco);
     }
 }
 footer{
-    background-color: black;
+    background-color: map-get($mapa-colores,negro);
 }
 .nav-item{
     transition: all 0.1s;
     &:hover{
-        background-color:rgb(3, 56, 7);
+        background-color:map-get($mapa-colores,verdeFondo--Ham);
     }
     a{
-        color:black;
+        color:map-get($mapa-colores, negro);
             &:hover{
-                color:white;
+                color:map-get($mapa-colores,blanco);
                 text-decoration:underline;
             }
     }

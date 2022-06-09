@@ -1,0 +1,13 @@
+/*mixin para el layout*/
+@mixin grid-columns($columnas){
+    display: grid;
+    grid-template-columns: repeat( $columnas, 1fr );
+}
+@mixin grid-rows($filas){
+    display: grid;
+    grid-template-rows: repeat( $filas, 1fr );
+}   
+@mixin grid-rows-auto($filas){
+    display: grid;
+    grid-template-rows: repeat( $filas, auto );
+}
