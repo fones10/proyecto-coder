@@ -32,7 +32,7 @@ body {
 
 footer section {
   display: grid;
-  grid-template-rows: 1fr auto; }
+  grid-template-rows: repeat(1, auto); }
 
 .separadores {
   display: grid;
@@ -45,13 +45,45 @@ footer section {
   display: grid;
   grid-template-rows: repeat(2, auto); }
 
+/*layout pagina sobre nosotros*/
+.espacio {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+
+.nosotros {
+  display: grid;
+  grid-template-columns: auto; }
+
+.espacio--uno {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); }
+
+.contenedores {
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr; }
+
+/*layout pagina garantias*/
+.fondo {
+  display: flex; }
+
+.cuadroUno {
+  display: flex; }
+
+/*layout pagina contactenos*/
+.contenedorGlobal {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+  .contenedorGlobal .bloquesGrid {
+    display: grid;
+    grid-template-rows: repeat(2, auto); }
+
 /*reset*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
-/*variables y mixin*/
+/*variables*/
 /*mapas-->acá creare los mapas con map-get*/
 /*colores y decoración, personalizacion propia de pagina*/
 .barraBusqueda {
@@ -61,9 +93,9 @@ footer section {
 header {
   background-color: white; }
 
-.nav a {
-  color: #646464; }
-  .nav a:hover {
+.nav-items a {
+  color: #929292; }
+  .nav-items a:hover {
     color: white;
     background-color: black;
     box-shadow: 0px 2px 2px; }
@@ -100,11 +132,12 @@ header {
 
 .cuadros {
   background-color: rgba(46, 255, 27, 0.199);
-  border: solid 1px #cecfce; }
+  border: solid 1px #cecfce;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
   .cuadros:hover {
     color: white;
     background-color: black;
-    box-shadow: 5px 5px 5px; }
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
 
 h2 a {
   color: #505050; }
@@ -124,91 +157,57 @@ footer {
       color: white;
       text-decoration: underline; }
 
-@media screen and (min-width: 700px) {
-  .btn {
-    visibility: hidden; }
-  .boton {
-    visibility: hidden; } }
+.nosotros {
+  color: black; }
+  .nosotros .texto {
+    color: black; }
 
-@media screen and (max-width: 700px) {
-  .carrusel {
-    width: 100%;
-    height: 18rem; }
-  .galeria {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    justify-self: center;
-    align-items: center; }
-  .separadores article {
-    display: grid;
-    grid-template-rows: 1fr auto;
-    font-size: 75%; }
-  .redes {
-    font-size: 75%; }
-  .redes img {
-    width: 50%; }
-  .logos {
-    display: grid;
-    grid-template-columns: 70% 15% 15%; }
-  .barraBusqueda {
-    position: fixed;
-    width: 38%;
-    height: 3.5%; }
-  .botonBuscar {
-    position: fixed;
-    height: 3.8%;
-    width: 10%; }
-  .color--menu a {
-    font-size: 70%;
-    visibility: hidden; }
-  nav.color--menu {
-    visibility: hidden; }
-  .lineaGris {
-    background-color: #c4c4c4;
-    width: 100%;
-    height: 3%;
-    visibility: hidden; }
-  .nosotrosImg {
-    height: 90%;
-    width: 100%;
-    margin-top: 3%;
-    margin-left: 2%;
-    margin-right: 2%; }
-  .nosotros {
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    justify-content: center;
-    font-size: 100%; }
-  div .nosotros--texto {
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 3%;
-    font-size: 100%;
-    text-align: center; }
-  .espacio--uno {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    gap: 0%; }
-  .contenedores {
-    display: grid;
-    grid-template-rows: 1fr 2fr 1fr;
-    height: 85%;
-    width: 85%;
-    background-color: rgba(46, 255, 27, 0.13);
+/*colores para pagina sobre Nosotros*/
+.contenedores {
+  background-color: rgba(46, 255, 27, 0.199);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+  .contenedores:hover {
+    background-color: black;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 95%;
+    width: 95%; }
+
+.cuadroUno {
+  background-color: rgba(255, 255, 255, 0.56); }
+
+.cuadroDos {
+  background: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+
+/*colores para pagina garantias*/
+.line {
+  background-color: #89c46d;
+  height: 2px; }
+
+.form-control:hover {
+  background-color: rgba(157, 206, 134, 0.212);
+  border-color: rgba(157, 206, 134, 0.411);
+  box-shadow: 0px 1px 1px; }
+
+.enviar {
+  background-color: rgba(157, 206, 134, 0.411);
+  border-color: rgba(157, 206, 134, 0.411);
+  box-shadow: 0px 2px 2px; }
+
+.option {
+  background-color: rgba(157, 206, 134, 0.212);
+  border-color: rgba(157, 206, 134, 0.411); }
+
+.bloques {
+  background-color: rgba(46, 255, 27, 0.199);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+  .bloques:hover {
+    background-color: black;
+    color: white;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
-  .destacadosOfertas {
-    margin-top: 5%; }
-  .galeria {
-    margin-bottom: 3%; }
-  nav ul.nav {
-    display: flex;
-    position: relative; }
-  .iconoUno {
-    margin-bottom: 2%; } }
 
-/*header*/
+/*header igual para todas las paginas*/
 /*menu nav bootstrap*/
 header {
   grid-area: header;
@@ -216,12 +215,12 @@ header {
   top: 0px;
   z-index: 2; }
 
-.nav a {
-  font-weight: bold;
+.nav-items a {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 85%;
-  text-decoration: none; }
-  .nav a:hover {
+  text-decoration: underline;
+  font-weight: bold; }
+  .nav-items a:hover {
     font-size: 100%;
     text-decoration: underline; }
 
@@ -271,6 +270,7 @@ header {
   height: 4%;
   top: 100px; }
 
+/*main para la psagina index*/
 /*comienzo hacer el main acá, puse todo el main dentro de un div*/
 .carousel-inner {
   z-index: -2; }
@@ -326,11 +326,513 @@ h3 {
   justify-self: center;
   align-self: center; }
 
+/*main para la pagina SobreNosotros*/
+.tarjeta {
+  padding: 2%; }
+
+.espacio {
+  text-decoration: none; }
+
+.nosotrosImg {
+  height: 90%;
+  width: 90%;
+  margin-top: 3%;
+  margin-left: 2%;
+  margin-right: 2%; }
+  .nosotrosImg:hover {
+    opacity: 0.9;
+    filter: alpha(opacity=1); }
+
+.nosotros {
+  margin-top: 10%;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  transition: all 0.3s; }
+
+.texto {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  margin-top: 5%;
+  line-height: 190%;
+  text-align: left; }
+
+.espacio--uno {
+  gap: 3%;
+  margin-left: 2%;
+  margin-right: 2%; }
+
+.contenedores {
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s; }
+  .contenedores h2 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem; }
+  .contenedores p {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif; }
+
+/*main para pagina Garantias*/
+.fondo {
+  background-image: url(../Assets/fondoFormulaio.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-top: 1%;
+  height: 110%;
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+  align-items: center; }
+
+.cuadroUno {
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 30rem;
+  height: 45rem;
+  left: 50%;
+  top: 2%;
+  z-index: 0; }
+
+.cuadroDos {
+  align-items: center;
+  width: 90%;
+  height: 93%;
+  z-index: 1;
+  font-family: Arial, Helvetica, sans-serif; }
+  .cuadroDos .custom-control-input {
+    margin-left: 1%; }
+  .cuadroDos legend {
+    text-align: center;
+    margin-top: 12%;
+    margin-bottom: 6%;
+    font-weight: bold;
+    font-size: 2em;
+    transition: all 0.3s; }
+    .cuadroDos legend:hover {
+      text-decoration: underline; }
+  .cuadroDos .form-group {
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 3%; }
+    .cuadroDos .form-group .form-control {
+      transition: all 0.1s; }
+      .cuadroDos .form-group .form-control:hover {
+        margin-left: 0%;
+        width: 102%; }
+    .cuadroDos .form-group .enviar {
+      margin-left: 80%;
+      width: 20%;
+      border-radius: 5%; }
+    .cuadroDos .form-group textarea {
+      width: 100%;
+      height: 8em; }
+
+/*main para pagina Contactenos*/
+div .tituloPrincipal {
+  margin-top: 3.5%;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3em; }
+
+.contenedorGlobal {
+  margin-top: 2%;
+  margin-bottom: 2%; }
+  .contenedorGlobal .tituloSecundario {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif; }
+  .contenedorGlobal .mapa {
+    height: 90%;
+    width: 90%;
+    margin-left: 2%; }
+  .contenedorGlobal .bloquesGrid {
+    gap: 6%;
+    margin-bottom: 4%;
+    margin-left: 5%; }
+    .contenedorGlobal .bloquesGrid .bloques {
+      text-align: center;
+      width: 75%;
+      height: 100%;
+      transition: all 0.3s; }
+      .contenedorGlobal .bloquesGrid .bloques:hover {
+        height: 100%;
+        width: 95%; }
+
+/*main para la pagina Sistema Operativo*/
+.grillaGeneral {
+  display: grid;
+  grid-template-rows: repeat(3, auto); }
+
+.containerUno {
+  display: grid;
+  grid-template-rows: repeat(2, auto); }
+  .containerUno .apple {
+    width: 100%; }
+
+.columnas {
+  display: grid;
+  grid-template-rows: repeat(3, auto); }
+
+.divisiones {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1%;
+  text-align: start; }
+  .divisiones:hover {
+    background-color: black;
+    color: white; }
+  .divisiones img {
+    width: 15rem; }
+  .divisiones div {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    text-align: start; }
+  .divisiones h2 {
+    margin-top: 2%;
+    font-size: 2.7rem; }
+  .divisiones p {
+    font-size: 1.5rem; }
+  .divisiones h3 {
+    justify-self: flex-start;
+    font-size: 2.6rem; }
+
+.containerDos {
+  display: grid;
+  grid-template-rows: repeat(2, auto); }
+  .containerDos .android {
+    width: 100%; }
+  .containerDos .ofertasTitulos {
+    color: red; }
+  .containerDos .titulo_color {
+    color: red; }
+  .containerDos .samA31 {
+    width: 18rem; }
+  .containerDos .samA53 {
+    width: 19rem; }
+  .containerDos .motoG30 {
+    width: 22rem; }
+
+.containerTres {
+  display: grid;
+  grid-template-rows: repeat(2, auto); }
+  .containerTres .windows {
+    width: 100%; }
+  .containerTres .divDos {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: start; }
+    .containerTres .divDos:hover {
+      background-color: black;
+      color: white; }
+    .containerTres .divDos img {
+      width: 15rem; }
+    .containerTres .divDos div {
+      display: grid;
+      grid-template-rows: repeat(3, auto);
+      text-align: start; }
+      .containerTres .divDos div h2 {
+        margin-top: 2%;
+        font-size: 2.7rem; }
+      .containerTres .divDos div p {
+        font-size: 1.5rem; }
+      .containerTres .divDos div h3 {
+        font-size: 2.6rem;
+        justify-self: flex-start; }
+
+/*main para la pagina Marcas*/
+.gridPrincipal {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  gap: 1%; }
+  .gridPrincipal .titulosMarcas {
+    margin-top: 5%;
+    text-align: center;
+    margin-bottom: 2%; }
+    .gridPrincipal .titulosMarcas .tituloDos {
+      font-size: 1.4em; }
+  .gridPrincipal .imgMarcas .marcasImg {
+    margin-bottom: 1%;
+    width: 100%;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); }
+  .gridPrincipal .colorlista {
+    padding: 2%;
+    background-color: rgba(139, 245, 148, 0.356);
+    border-top: solid rgba(0, 0, 0, 0.596); }
+
+/*main para la pagina gamas*/
+.gridGamas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2%; }
+  .gridGamas .parteUno {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: 1.5%; }
+    .gridGamas .parteUno h2 {
+      text-align: center;
+      align-self: center;
+      background-color: rgba(46, 255, 27, 0.199);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      padding: 1%;
+      margin-top: 17%; }
+      .gridGamas .parteUno h2:hover {
+        background-color: black;
+        color: white; }
+    .gridGamas .parteUno .gamasUno {
+      width: 98%;
+      height: 25rem;
+      transition: all 0.1s;
+      margin-bottom: 20%; }
+      .gridGamas .parteUno .gamasUno:hover {
+        width: 100%;
+        height: 26rem;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+  .gridGamas .parteDos {
+    display: grid;
+    grid-template-rows: 1fr 2fr 2fr;
+    margin-top: 2%;
+    gap: 2%; }
+    .gridGamas .parteDos .gamasGenerales {
+      text-align: center;
+      align-self: end;
+      background-color: rgba(46, 255, 27, 0.199);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      margin-right: 2%; }
+      .gridGamas .parteDos .gamasGenerales:hover {
+        background-color: black;
+        color: white; }
+    .gridGamas .parteDos .video {
+      width: 97%; }
+    .gridGamas .parteDos .cuadrotext {
+      align-self: end;
+      background-color: rgba(86, 243, 72, 0.199);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      margin-right: 2%;
+      margin-bottom: 3%;
+      padding: 2%; }
+      .gridGamas .parteDos .cuadrotext:hover {
+        background-color: black;
+        color: white; }
+      .gridGamas .parteDos .cuadrotext .explicamos {
+        text-align: center; }
+
+/*main para la pagina Accesorios*/
+.accesoriosCelular {
+  text-align: center;
+  margin-top: 4%;
+  text-decoration: underline;
+  font-weight: bold;
+  transition: all 0.1s; }
+  .accesoriosCelular:hover {
+    color: rgba(51, 170, 40, 0.93); }
+
+.accesorioImg {
+  margin-top: 3%;
+  width: 100%;
+  height: 25rem;
+  margin-bottom: 2%; }
+
+.gridGaleria {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  gap: 2%;
+  margin: 1%;
+  margin-bottom: 4%; }
+  .gridGaleria .contenedoresCuatrouno {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: rgba(46, 255, 27, 0.199);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    gap: 1%;
+    padding-top: 2%;
+    padding-left: 2%;
+    transition: all 0.1s;
+    text-align: center; }
+    .gridGaleria .contenedoresCuatrouno:hover {
+      background-color: black;
+      color: white; }
+    .gridGaleria .contenedoresCuatrouno .iPhoneGaleria {
+      width: 90%; }
+    .gridGaleria .contenedoresCuatrouno .contenedordiv {
+      height: 80%; }
+  .gridGaleria .contenedoresCuatrodos {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: rgba(46, 255, 27, 0.199);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    padding-top: 2%;
+    padding-left: 2%;
+    gap: 1%;
+    transition: all 0.1s; }
+    .gridGaleria .contenedoresCuatrodos:hover {
+      background-color: black;
+      color: white; }
+    .gridGaleria .contenedoresCuatrodos .aro {
+      width: 100%;
+      height: 93%; }
+    .gridGaleria .contenedoresCuatrodos .contenedordiv {
+      height: 80%; }
+  .gridGaleria .contenedoresCuatrotres {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: rgba(46, 255, 27, 0.199);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-bottom: 4%;
+    gap: 1%;
+    transition: all 0.1s; }
+    .gridGaleria .contenedoresCuatrotres:hover {
+      background-color: black;
+      color: white; }
+    .gridGaleria .contenedoresCuatrotres .silicona {
+      width: 90%; }
+    .gridGaleria .contenedoresCuatrotres .contenedordiv {
+      height: 80%; }
+  .gridGaleria .contenedoresCuatrocuatro {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: rgba(46, 255, 27, 0.199);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-bottom: 4%;
+    transition: all 0.1s; }
+    .gridGaleria .contenedoresCuatrocuatro:hover {
+      background-color: black;
+      color: white; }
+    .gridGaleria .contenedoresCuatrocuatro .pencil {
+      width: 100%;
+      height: 100%; }
+    .gridGaleria .contenedoresCuatrocuatro .contenedordiv {
+      height: 80%; }
+
+/*main para la pagina Ofertas*/
+.tituloOfertas {
+  margin-top: 10%;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 4.5rem;
+  font-weight: bold; }
+  .tituloOfertas:hover {
+    color: rgba(51, 170, 40, 0.93); }
+
+.gridGeneral {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 2%;
+  margin: 2%; }
+
+.contenedorOfertascero {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-color: rgba(46, 255, 27, 0.199);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 4%;
+  text-align: center;
+  padding-top: 2%;
+  padding-left: 2%;
+  padding-bottom: 2%;
+  transition: all 0.1s; }
+  .contenedorOfertascero:hover {
+    background-color: black;
+    color: white;
+    width: 95%; }
+  .contenedorOfertascero .contenedorinterno {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 6%; }
+    .contenedorOfertascero .contenedorinterno h2 {
+      font-size: 2rem; }
+    .contenedorOfertascero .contenedorinterno h3 {
+      font-size: 1.5rem;
+      text-decoration: line-through; }
+  .contenedorOfertascero .samsungA31 {
+    width: 100%;
+    align-self: center;
+    justify-self: center; }
+
+.contenedorOfertasuno {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-color: rgba(46, 255, 27, 0.199);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  margin-top: 4%;
+  padding-top: 2%;
+  padding-left: 2%;
+  padding-bottom: 2%;
+  transition: all 0.1s; }
+  .contenedorOfertasuno:hover {
+    background-color: black;
+    color: white;
+    width: 95%; }
+  .contenedorOfertasuno .contenedorinterno {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 6%; }
+    .contenedorOfertasuno .contenedorinterno h2 {
+      font-size: 2rem; }
+    .contenedorOfertasuno .contenedorinterno h3 {
+      font-size: 1.5rem;
+      text-decoration: line-through; }
+  .contenedorOfertasuno .samsungA53 {
+    width: 100%;
+    align-self: center;
+    justify-self: center; }
+
+.contenedorOfertasdos {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-color: rgba(46, 255, 27, 0.199);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  margin-top: 4%;
+  padding-top: 2%;
+  padding-left: 2%;
+  padding-bottom: 2%;
+  padding-right: 2%;
+  transition: all 0.1s; }
+  .contenedorOfertasdos:hover {
+    background-color: black;
+    color: white;
+    width: 95%; }
+  .contenedorOfertasdos .contenedorinterno {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 6%; }
+    .contenedorOfertasdos .contenedorinterno h2 {
+      font-size: 2rem; }
+    .contenedorOfertasdos .contenedorinterno h3 {
+      font-size: 1.5rem;
+      text-decoration: line-through; }
+  .contenedorOfertasdos .motorolaG30 {
+    align-self: center;
+    justify-self: center;
+    width: 100%; }
+
 /*comienzo hacer el footer acá, separe el section en 2 divs*/
 footer {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 75%;
-  margin-top: 1%; }
+  font-size: 75%; }
 
 .separadores {
   align-items: center;
@@ -358,3 +860,284 @@ article h4 {
     text-decoration: underline; }
 
 /*mixin para el layout*/
+@media screen and (min-width: 700px) {
+  .btn {
+    visibility: hidden; }
+  .boton {
+    visibility: hidden; } }
+
+@media screen and (max-width: 700px) {
+  .carrusel {
+    width: 100%;
+    height: 18rem; }
+  .galeria {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    justify-self: center;
+    align-items: center; }
+  .separadores article {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    font-size: 75%; }
+  .redes {
+    font-size: 75%; }
+  .redes img {
+    width: 50%; }
+  .logos {
+    display: grid;
+    grid-template-columns: 70% 15% 15%; }
+  .barraBusqueda {
+    position: fixed;
+    width: 40%;
+    height: 3.9%; }
+  .botonBuscar {
+    position: fixed;
+    height: 3.8%;
+    width: 11.5%; }
+  .color--menu a {
+    font-size: 70%;
+    visibility: hidden; }
+  nav.color--menu {
+    visibility: hidden; }
+  .lineaGris {
+    background-color: #c4c4c4;
+    width: 100%;
+    height: 3%;
+    visibility: hidden; }
+  .destacadosOfertas {
+    margin-top: 5%; }
+  .galeria {
+    margin-bottom: 3%; }
+  nav ul.nav {
+    display: flex;
+    position: relative; }
+  .iconoUno {
+    margin-bottom: 2%; } }
+
+/*media para pagina sobre nosotros*/
+@media screen and (max-width: 700px) {
+  .tarjeta {
+    border-radius: 2%;
+    border-color: rgba(138, 138, 138, 0.411);
+    border-radius: 2%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center; }
+    .tarjeta:hover {
+      transform: translatey(10px);
+      background-color: rgba(189, 189, 189, 0.226);
+      margin-bottom: 3%; }
+  .espacio {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0%; }
+  .nosotrosImg {
+    height: 98%;
+    width: 98%;
+    margin-top: 3%; }
+  .nosotros {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    font-size: 2.5rem; }
+  .texto {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem; }
+  .espacio--uno {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0%; }
+  .contenedores {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    height: 85%;
+    width: 85%;
+    background-color: rgba(46, 255, 27, 0.13);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); } }
+
+/*media para pagina contactenos*/
+@media screen and (max-width: 700px) {
+  .contenedorGlobal {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-bottom: 10%;
+    margin-top: 10%; }
+    .contenedorGlobal .mapa {
+      height: 90%;
+      width: 90%;
+      margin-left: 2%; }
+    .contenedorGlobal .bloquesGrid {
+      gap: 6%;
+      margin-bottom: 4%;
+      margin-left: 5%;
+      margin-top: 5%; } }
+
+/*media para pagina sistema operativo*/
+@media screen and (max-width: 700px) {
+  .grillaGeneral {
+    display: grid;
+    grid-template-rows: repeat(3, auto); }
+    .grillaGeneral .containerUno {
+      display: grid;
+      grid-template-rows: repeat(2, auto); }
+      .grillaGeneral .containerUno .columnas {
+        display: grid;
+        grid-template-rows: repeat(3, auto); }
+        .grillaGeneral .containerUno .columnas .divisiones {
+          display: grid;
+          grid-template-columns: 1fr 2fr;
+          grid-template-rows: 1fr;
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 1%;
+          text-align: center; }
+          .grillaGeneral .containerUno .columnas .divisiones img {
+            width: 100%;
+            height: 100%; }
+          .grillaGeneral .containerUno .columnas .divisiones div {
+            display: grid;
+            grid-template-rows: repeat(3, auto);
+            padding-bottom: 2%;
+            text-align: center; }
+            .grillaGeneral .containerUno .columnas .divisiones div h2 {
+              margin-top: 5%;
+              font-size: 1.5rem; }
+            .grillaGeneral .containerUno .columnas .divisiones div h3 {
+              margin-bottom: 3%;
+              font-size: 1.5rem;
+              justify-self: center; }
+            .grillaGeneral .containerUno .columnas .divisiones div p {
+              font-size: 1rem; }
+      .grillaGeneral .containerUno .apple {
+        width: 100%; }
+  .windows {
+    width: 100%; }
+  .divisiones img {
+    width: 100%; }
+  .containerDos {
+    display: grid;
+    grid-template-rows: repeat(2, auto); }
+    .containerDos .android {
+      width: 100%; }
+    .containerDos .columnas {
+      display: grid;
+      grid-template-rows: repeat(3, auto);
+      height: 10%;
+      gap: 2%; }
+      .containerDos .columnas .divisiones {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1%;
+        text-align: center; }
+        .containerDos .columnas .divisiones img {
+          width: 100%;
+          height: 100%; }
+        .containerDos .columnas .divisiones div {
+          display: grid;
+          grid-template-rows: repeat(3, auto);
+          padding-bottom: 2%;
+          text-align: center; }
+        .containerDos .columnas .divisiones h2 {
+          margin-top: 5%;
+          font-size: 1.5rem; }
+        .containerDos .columnas .divisiones h3 {
+          margin-bottom: 3%;
+          font-size: 1.5rem;
+          justify-self: center; }
+        .containerDos .columnas .divisiones p {
+          font-size: 1.5rem; }
+  .containerTres {
+    display: grid;
+    grid-template-rows: repeat(2, auto); }
+    .containerTres .windows {
+      width: 100%; }
+    .containerTres .columnas {
+      display: grid;
+      grid-template-rows: repeat(3, auto);
+      gap: 2%; }
+      .containerTres .columnas .divDos {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1%;
+        text-align: center; }
+        .containerTres .columnas .divDos img {
+          width: 100%;
+          height: 100%; }
+        .containerTres .columnas .divDos div {
+          display: grid;
+          grid-template-rows: repeat(3, auto);
+          padding-bottom: 2%;
+          text-align: center; }
+        .containerTres .columnas .divDos h2 {
+          font-size: 1.5rem; }
+        .containerTres .columnas .divDos h3 {
+          margin-bottom: 3%;
+          font-size: 1.5rem;
+          justify-self: center; }
+        .containerTres .columnas .divDos p {
+          font-size: 1rem; } }
+
+/*media para pagina gamas*/
+@media screen and (max-width: 700px) {
+  .gridGamas {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: 2%; }
+    .gridGamas .parteDos {
+      display: grid;
+      grid-template-rows: repeat(3, auto);
+      gap: 2%; }
+      .gridGamas .parteDos .cuadrotext {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        margin-right: 2%;
+        margin-left: 2%;
+        margin-bottom: 20%;
+        padding: 2%; }
+        .gridGamas .parteDos .cuadrotext:hover {
+          background-color: black;
+          color: white; }
+        .gridGamas .parteDos .cuadrotext .explicamos {
+          text-align: center; }
+  h2 {
+    text-align: center;
+    align-self: center;
+    padding: 1%;
+    margin-top: 2%; }
+  .gamasUno {
+    width: 1rem;
+    height: 1rem;
+    margin-top: 12%; } }
+
+/*media para pagina accesorios*/
+@media screen and (max-width: 700px) {
+  .gridGaleria {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    gap: 2%;
+    margin: 1%;
+    margin-bottom: 20%; } }
+
+/*media para pagina ofertas*/
+@media screen and (max-width: 700px) {
+  .tituloOfertas {
+    margin-top: 10%;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 4.5rem;
+    font-weight: bold; }
+    .tituloOfertas:hover {
+      color: rgba(51, 170, 40, 0.93); }
+  .gridGeneral {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    gap: 2%;
+    margin-bottom: 20%; } }

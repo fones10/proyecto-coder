@@ -6,98 +6,169 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>silver-mobile</title>
     <link rel="shorcut icon" href="../Assets/favicon.png">
+    <link rel="stylesheet" href="./css/styles_uno.css">
+    <link rel="shorcut icon" href="./Assets/favicon.png">
     <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     
 </head>
 
-<body>
-
-    <header>
-        <hr>
-
+<body><!--desde aca armo la grilla que va a ser la base para toda mi pagina-->
+    <header> <!--1 contenedor-->
+        <!-- grids
+        <nav class="navegacion"> 1.1-->
+        <!---
+            <ul class="titulosArriba">
+                <li><a href="../Paginas/SobreNosotros.html" class="sobreNosotrosuno">Sobre Nosotros</a></li>
+                <li><a href="../Paginas/Garantias.html" class="garantiasUno">Garantias</a></li>
+                <li><a href="../Paginas/contactenos.html" class="contactenosUno">Contactenos</a></li>  
+            </ul>
+        </nav>
+        -->
         <div id="color">
 
         </div>
-        <nav>
-            <ul>
-                <li><a href="../Paginas/SobreNosotros.html" class="sobreNosotrosuno">Sobre Nosotros</a></li>
-                <li><a href="../Paginas/Garantias.html" class="garantiasUno">Garantias</a></li>
-                <li><a href="../Paginas/contactenos.html" class="contactenosUno">Contactenos</a></li>   
-            </ul>
+        <nav class="container-fluid d-flex justify-content-end">
+                <ul class="container nav justify-content-end">
+                    <li class="nav-items"><a href="./SobreNosotros.html" class="nav-link">Sobre Nosotros</a></li>
+                    <li class="nav-items"><a href="./Garantias.html" class="nav-link">Garantias</a></li>
+                    <li class="nav-items"><a href="./contactenos.html" class="nav-link">Contactenos</a></li>  
+                </ul>
         </nav>
 
         <!--acá colocaremos la imagen del logo, login y carrito de compras-->
-       
-        <div>
-            <a href="../index.html"><img src="../Assets/icono.jpg" alt="icono" class="iconoUno"/></a>
-            <a href="../Paginas/login.html"><img src="../Assets/login.jpg" alt="login" class="login"/></a>
-            <img src="../Assets/carrito de compras.jpg" alt="carrito de compras" class="compras"/>
+        <section class="logos"><!--1.2-->
+            <a href="../index.html">
+                <img src="../Assets/icono.jpg" alt="icono" class="iconoUno"/>
+            </a>
+            <img src="../Assets/iniciar-sesion.png" alt="login" class="login"/>
+            <img src="../Assets/verificar.png" alt="carrito de compras" class="compras"/>
+        </section>
+        <!--acá colocaremos la barra de busqueda,se agrega con un input-->
+        <article class="barras">
+            <input class=barraBusqueda type="text"/>
+            <input type="button" class=botonBuscar value="buscar" />  
+        </article>
+
+        
+        <!--menu hamburguesa el cual solo voy aplicar para cuando sea la vista mobile, borro el menu verde con un @media y aplico este menu.-->
+        <p class="boton">
+            <button
+                class="btn"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseWidthExample"
+                aria-expanded="false"
+                aria-controls="collapseWidthExample"
+            >   
+            <img src="../Assets/menu-abierto.png" class="menuHamburguesa"/>
+            </button>
+        </p>
+        <div class="collapse collapse-horizontal" id="collapseWidthExample">
+            <div class="card card-body bg-light " style="width: 60%">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+                    <li class="nav-item">
+                        <a class="nav-link link-success" href="./sistemaoperativo.html">Sistema Operativo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-success" href="./marcas.html">Marcas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-success" href="./gamas.html">Gamas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-success" href="./accesorios.html">Accesorios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-success" href="./ofertas.html">Ofertas</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
         </div>
         
-        <!--acá colocaremos la barra de busqueda,se agrega con un input-->
-    
-        <input class=barraBusqueda type="text"/>
-        <input type="button" class=botonBuscar value="buscar"/>   
+        <div class="lineaGris">
+        </div>
 
-        <nav id="color--menu">
-            <ul class="menu">
-                <li><a href="./sistemaoperativo.html" class="sistemaOperativo">Sistema Operativo</a></li>
-                <li><a href="../Paginas/marcas.html" class="marcas">Marcas</a></li>
-                <li><a href="#" class="gamas">Gamas</a></li>
-                <li><a href="./accesorios.html" class="accesorios">Accesorios</a></li>
-                <li><a href="./ofertas.html" class="ofertas">Ofertas</a>
-                    <section id="Destacados/Ir a Ofertas"></section> 
+        <nav class="color--menu">
+                <a href="../Paginas/sistemaoperativo.html" class="sistemaOperativo">Sistema Operativo</a>
+                <a href="../Paginas/marcas.html" class="marcas">Marcas</a>
+                <a href="../Paginas/gamas.html" class="gamas">Gamas</a>
+                <a href="../Paginas/accesorios.html" class="accesorios">Accesorios</a>
+                <!--#destacados ir a ofertas me lleva a la parte de abajo del mismo index, donde aaprecen los telefonos en oferta, pero si yo ingreso desde otra pagina que no sea el index, me redirije a la pagina de ofertas.-->
+                <a href="../Paginas/ofertas.html" class="ofertas">Ofertas</a>
                 <!--acá realice un enlace in interno para que me lleve a una misma seccion de la pagina-->
-            
-            </ul>
         </nav>
 
+        <div class="lineaGris">
+        </div>
+
     </header>
-
-</head>
     <main>
+    
+        <div class="gridGamas">    
+            
+            <section class="parteUno">
 
-        <section>
+                <h2 class="diferencia">¿Qué diferencia hay entre móviles de gama alta, media y baja?</h2>
+                <img src="../Assets/gamas.png" alt="gamas" class="gamasUno">
+            
+            </section>
 
-            <h1 class="gamasGenerales">¿Qué signfica gama baja,media y alta?</h1>
-                <h2 class="explicamos">No te preocupes aquí te lo explicamos</h2>
+            <section class="parteDos">
+
+                <h1 class="gamasGenerales">¿Qué signfica gama baja,media y alta?</h1>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/qUWOYNgUUKw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
+                
+                <div class="cuadrotext">
+                    <h2 class="explicamos">No te preocupes aquí te lo explicamos</h2>
+                    <p class="parrafo">
+                        Cuando compramos un Smartphone debemos fijarnos en su precio, resolución de imagen, cámara, potencia, rendimiento, diseño y materiales con los que está construido. Dependiendo de estos factores nos encontraremos ante un dispositivo de gama alta, media o baja. La infinidad de modelos que existen en el mercado suele generar muchas dudas en el usuario, por eso en Multioferta vamos a explicarte las diferencias de gamas de los teléfonos para aclararlas.
+                        Hay que tener en cuenta que el coste que vas a pagar por un terminal no va definir que sea mejor o peor para el uso que se vaya a dar, ya que intervienen muchos factores. Por ejemplo, si se utiliza para llamar, mensajería instantánea y uso de aplicaciones en social media, puede valer una gama baja lo mismo que una alta. Otra cosa sería que se utilizase el dispositivo para almacenamiento y uso de la cámara. Ahí sí que se empieza a notar de manera importante el paso de una gama a otra
+                    </p>
+                </div>
+            </section>
 
-        </section>
-
-        <section>
-
-            <h2 class="diferencia">¿Qué diferencia hay entre móviles de gama alta, media y baja?</h2>
-            <img src="../Assets/gamas.png" alt="gamas" class="gamasUno">
-            <p class="parrafo">
-                Cuando compramos un Smartphone debemos fijarnos en su precio, resolución de imagen, cámara, potencia, rendimiento, diseño y materiales con los que está construido. Dependiendo de estos factores nos encontraremos ante un dispositivo de gama alta, media o baja. La infinidad de modelos que existen en el mercado suele generar muchas dudas en el usuario, por eso en Multioferta vamos a explicarte las diferencias de gamas de los teléfonos para aclararlas.
-
- 
-                Hay que tener en cuenta que el coste que vas a pagar por un terminal no va definir que sea mejor o peor para el uso que se vaya a dar, ya que intervienen muchos factores. Por ejemplo, si se utiliza para llamar, mensajería instantánea y uso de aplicaciones en social media, puede valer una gama baja lo mismo que una alta. Otra cosa sería que se utilizase el dispositivo para almacenamiento y uso de la cámara. Ahí sí que se empieza a notar de manera importante el paso de una gama a otra
-            </p>
-        
-        </section>
+        </div>
 
     </main>
-<footer>
+    <footer> <!--3 contenedor-->
         <section>
-            <h4 style="color:white" class="dire">116B #74A-65 inter 1 Apto 903</h4>
-                <span style="color:white" class="ubi">Ubícanos</span>
-                <img src="../Assets/casita.footer.png" alt="casa"carrito class="casa"/>
-            <h4 style="color:white"class="correo">sandra.l.sandoval@hotmail.com</h4>
-                <span style="color:white" class="ema">Email</span>
-                <img src="../Assets/email_footer.png" alt="Email" class="email"/>
-            <h4 style="color:white" class="cel">+573012411047</h4>
-                <span style="color:white" class="ven">Venta Telefónica</span>
-                <img src="../Assets/telefonos_footer.png" alt="venta_tel" class="telefonica"/>
-            <hr>
-                <h5><u style="color:white"class="seguinos">seguinos en:</u></h5>
-            <a href="http://www.facebook.com">
+
+            <div class="separadores">
+
+                <article>
+                    <img src="../Assets/casita.footer.png" alt="casa"carrito class="casa"/>
+                    <span style="color:white" class="ubi">Ubícanos</span>
+                    <h4 style="color:white" class="dire">116B #74A-65 inter 1 Apto 903</h4>
+                </article>
+
+                <article>
+                    <img src="../Assets/email_footer.png" alt="Email" class="email"/>
+                    <span style="color:white" class="ema">Email</span>
+                    <h4 style="color:white"class="correo">sandra.l.sandoval@hotmail.com</h4>
+                </article>
+                
+                <article>
+                    <img src="../Assets/telefonos_footer.png" alt="venta_tel" class="telefonica"/>
+                    <span style="color:white" class="ven">Venta Telefónica</span>
+                    <h4 style="color:white" class="cel">+573012411047</h4>
+                </article>
+
+            </div>
+            <div class="redes">
+                <h5><u style="color:white"class="seguinos">seguinos en:</u>
+                </h5>
+                <a href="http://www.facebook.com">
                 <img src="../Assets/Facebook_twitter.png" alt="Facebook"id="facebook"/>
-            </a>
+                </a>
+            </div>
         </section>
-</footer>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
-    </html>
+</html>
     
     

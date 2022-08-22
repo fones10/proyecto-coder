@@ -1,3 +1,4 @@
+
 @media screen and (min-width: 700px){
     .btn{
         visibility:hidden;
@@ -37,13 +38,13 @@
     }
     .barraBusqueda{
         position: fixed;
-        width: 38%;
-        height: 3.5%;
+        width: 40%;
+        height: 3.9%;
     }
     .botonBuscar{
         position: fixed;
         height: 3.8%;
-        width: 10%;
+        width: 11.5%;
     }
     .color--menu a{
         font-size: 70%;
@@ -57,40 +58,6 @@
         width: 100%;
         height: 3%;
         visibility:hidden;
-    }
-    .nosotrosImg{
-        height:90%;
-        width: 100%;
-        margin-top: 3%;
-        margin-left: 2%;
-        margin-right: 2%;
-    }   
-    .nosotros{
-        color:black;
-        font-family: Arial, Helvetica, sans-serif;
-        justify-content: center;
-        font-size: 100%;
-    }
-    div .nosotros--texto{
-        color:black;
-        font-family: Arial, Helvetica, sans-serif;
-        margin-left: 3%;
-        font-size: 100%;
-        text-align: center;
-    }
-    .espacio--uno{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
-        gap: 0%
-    }
-    .contenedores{
-        display: grid;
-        grid-template-rows: 1fr 2fr 1fr;
-        height: 85%;
-        width: 85%;
-        background-color:rgba(46, 255, 27, 0.13);
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
     .destacadosOfertas{
         margin-top: 5%;
@@ -106,5 +73,295 @@
     }
     .iconoUno{
         margin-bottom: 2%;
+    }
+}
+/*media para pagina sobre nosotros*/
+
+@media screen and (max-width: 700px) {
+
+    .tarjeta{
+        border-radius: 2%;
+        border-color: rgba(138, 138, 138, 0.411);
+        border-radius: 2%;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        text-align: center;
+            &:hover{
+                transform: translatey(10px);
+                background-color: rgba(189, 189, 189, 0.226);
+                margin-bottom: 3%;
+            }
+
+    }
+    .espacio{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        gap: 0%
+    }
+    .nosotrosImg{
+        height:98%;
+        width: 98%;
+        margin-top: 3%;
+    }   
+    .nosotros{
+        color:black;
+        font-family: Arial, Helvetica, sans-serif;
+        justify-content: center;
+        font-size: 2.5rem;
+    }
+    .texto{
+        color:black;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.2rem;
+    }
+    .espacio--uno{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 0%
+    }
+    .contenedores{
+        display: grid;
+        grid-template-rows: 1fr 2fr 1fr;
+        height: 85%;
+        width: 85%;
+        background-color:rgba(46, 255, 27, 0.13);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+}
+
+/*media para pagina contactenos*/
+
+@media screen and (max-width: 700px) {
+
+    .contenedorGlobal{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin-bottom: 10%;
+        margin-top: 10%;
+        .mapa{
+            height:90%;
+            width: 90%;
+            margin-left: 2%;
+        }
+        .bloquesGrid{
+            gap: 6%;
+            margin-bottom: 4%;
+            margin-left: 5%;
+            margin-top: 5%;
+        }
+    }
+}
+
+
+/*media para pagina sistema operativo*/
+@media screen and (max-width: 700px) {
+    .grillaGeneral{
+        display:grid;
+        grid-template-rows: repeat(3, auto);
+            .containerUno{
+                display:grid;
+                grid-template-rows: repeat(2, auto);
+                    .columnas{
+                        display: grid;
+                        grid-template-rows: repeat(3, auto);
+                        .divisiones{
+                            display: grid;
+                            grid-template-columns: 1fr 2fr;
+                            grid-template-rows: 1fr;
+                            font-family: $fuente-principal;
+                            font-size: 1%;
+                            text-align: center;
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                                div{
+                                    display: grid;
+                                    grid-template-rows: repeat(3, auto);
+                                    padding-bottom: 2%;
+                                    text-align: center;
+                                        h2{
+                                            margin-top: 5%;
+                                            font-size: 1.5rem;
+                                        }
+                                        h3{
+                                            margin-bottom: 3%;
+                                            font-size: 1.5rem;
+                                            justify-self: center;
+                                        }
+                                        p{
+                                            font-size: 1rem;
+                                        }
+                                }
+                        }
+                    }
+                    .apple{
+                        width: 100%;
+                    }
+            }
+    }
+    .windows{
+        width: 100%;
+    }
+    .divisiones{
+        img{
+            width: 100%;
+        }
+    }
+    .containerDos{
+        display:grid;
+        grid-template-rows: repeat(2, auto);
+            .android{
+                width: 100%;
+            }
+            .columnas{
+                display: grid;
+                grid-template-rows: repeat(3, auto);
+                height: 10%;
+                gap: 2%;
+                    .divisiones{
+                        display: grid;
+                        grid-template-columns: 1fr 2fr;
+                        grid-template-rows: 1fr;
+                        font-family: $fuente-principal;
+                        font-size: 1%;
+                        text-align: center;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                        div{
+                            display: grid;
+                            grid-template-rows: repeat(3, auto);
+                            padding-bottom: 2%;
+                            text-align: center;
+                                }
+                                h2{
+                                    margin-top: 5%;
+                                    font-size: 1.5rem;
+                                }
+                                h3{
+                                    margin-bottom: 3%;
+                                    font-size: 1.5rem;
+                                    justify-self: center;
+                                }
+                                p{
+                                    font-size: 1.5rem;
+                                }
+                    }
+                }
+    }
+    .containerTres{
+        display:grid;
+        grid-template-rows: repeat(2, auto);
+            .windows{
+                width: 100%;
+            }
+            .columnas{
+                display: grid;
+                grid-template-rows: repeat(3, auto);
+                gap: 2%;
+                    .divDos{
+                        display: grid;
+                        grid-template-columns: 1fr 2fr;
+                        grid-template-rows: 1fr;
+                        font-family: $fuente-principal;
+                        font-size: 1%;
+                        text-align: center;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                        div{
+                            display: grid;
+                            grid-template-rows: repeat(3, auto);
+                            padding-bottom: 2%;
+                            text-align: center;
+                                }
+                                h2{
+                                    font-size: 1.5rem;
+                                }
+                                h3{
+                                    margin-bottom: 3%;
+                                    font-size: 1.5rem;
+                                    justify-self: center;
+
+                                }
+                                p{
+                                    font-size: 1rem;
+                                }
+                            }
+                    }
+        }
+}
+/*media para pagina gamas*/
+@media screen and (max-width: 700px) {
+    .gridGamas{
+        display:grid;
+        grid-template-columns: 1fr;
+        margin-left: 2%;
+        .parteDos{
+            display: grid;
+            grid-template-rows: repeat(3,auto);
+            gap:2%;
+            .cuadrotext{
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                margin-right: 2%;
+                margin-left: 2%;
+                margin-bottom: 20%;
+                padding: 2%;
+                    &:hover{
+                        background-color: black;
+                        color:white;
+                    }
+                    .explicamos{
+                        text-align: center;
+                    }
+            }
+        }
+    }
+    h2{
+        text-align: center;
+        align-self: center;
+        padding: 1%;
+        margin-top: 2%;
+    }
+    .gamasUno{
+        width: 1rem;
+        height: 1rem;
+        margin-top: 12%;
+    }
+}
+/*media para pagina accesorios*/
+@media screen and (max-width: 700px) {
+    .gridGaleria{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, auto);
+        gap:2%;
+        margin:1%;
+        margin-bottom: 20%;
+}
+}
+/*media para pagina ofertas*/
+@media screen and (max-width: 700px) {
+    .tituloOfertas{
+        margin-top: 10%;
+        text-align: center;
+        text-decoration: underline;
+        font-size: 4.5rem;
+        font-weight: bold;
+            &:hover{
+                color:rgba(51, 170, 40, 0.93);
+            }
+    }
+    .gridGeneral{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,auto);
+        gap:2%;
+        margin-bottom:20%;  
     }
 }

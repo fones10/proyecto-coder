@@ -31,8 +31,7 @@ body{
     }
 }
 footer section{
-    display: grid;
-    grid-template-rows: 1fr auto;
+    @include grid-rows-auto(1);
 }
 .separadores{
     @include grid-columns(3);
@@ -43,3 +42,40 @@ footer section{
 .redes{
     @include grid-rows-auto(2);
 }
+
+/*layout pagina sobre nosotros*/
+
+.espacio{
+    @include grid-columns(2);
+}
+
+.nosotros{
+    display: grid;
+    grid-template-columns: auto;
+}
+.espacio--uno{
+    @include grid-columns(3);
+}
+.contenedores{
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+
+/*layout pagina garantias*/
+
+.fondo{
+    display: flex;
+}
+.cuadroUno{
+    display: flex;
+}
+
+/*layout pagina contactenos*/
+
+.contenedorGlobal{
+    @include grid-columns(2);
+    .bloquesGrid{
+        @include grid-rows-auto(2);
+    }
+}
+

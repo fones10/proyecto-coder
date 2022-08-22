@@ -1,4 +1,4 @@
-/*header*/
+/*header igual para todas las paginas*/
 /*menu nav bootstrap*/
 header{
     grid-area: header; 
@@ -6,11 +6,11 @@ header{
     top: 0px;
     z-index: 2;
 }
-.nav a{
-    font-weight: bold;
+.nav-items a{
     font-family: $fuente-principal;
     font-size: 85%;
-    text-decoration: $text-decoration; 
+    text-decoration: underline; 
+    font-weight: bold;
         &:hover{
             font-size: 100%;
             text-decoration: underline;
@@ -63,3 +63,4 @@ justify-items: center;
     height: 4%;
     top: 100px;
 }
+
